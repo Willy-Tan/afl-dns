@@ -1,6 +1,17 @@
 (jbuild_version 1)
 
 (executable
-  ((name afltest)                 ; The name of your entry file, minus the .ml
-   (public_name afltest) ; Whatever you like, as far as I can tell
+  ((name crowbar_test)                 ; The name of your entry file, minus the .ml
+   (public_name crowbar_test) ; Whatever you like, as far as I can tell
+   (modules (crowbar_test))
    (libraries (crowbar dns afl-persistent astring ))))         ; Express a dependency on the "lib" module
+
+(executable
+  ((name persistent_test)                 ; The name of your entry file, minus the .ml
+   (public_name persistent_test) ; Whatever you like, as far as I can tell
+   (modules (persistent_test))
+   (libraries (crowbar dns afl-persistent astring ))))         ; Express a dependency on the "lib" module
+
+
+
+

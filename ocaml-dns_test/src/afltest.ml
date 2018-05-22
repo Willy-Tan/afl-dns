@@ -1,23 +1,3 @@
-(*General test for fuzzing, raises every possible exception.*)
-(*
-let main () =
-  let s = read_line () in
-  let testcase =
-    try Some (Cstruct.of_hex s)
-    with
-    | _ -> None (*Bad kind of test*)
-  in
-  match testcase with
-  | None -> ()
-  | Some cstr -> 
-    Printf.printf "%s\n\n" (Dns.Dig.string_of_answers (Dns.Packet.parse cstr));;
-
-let () = AflPersistent.run main;;
-
-
-
-*)
-
 (*TODO : Packet generator*)
 
 
@@ -85,8 +65,5 @@ let is_positive n = (n >= 0);;
 let simple_test () =
   Crowbar.add_test ~name:"Int test" [Crowbar.uint8] @@ (fun int -> Printf.printf "%d\n" int; Crowbar.check (is_positive int));;
 
-
 let () =
-  qname_test ();;
-
-
+  simple_test ();;

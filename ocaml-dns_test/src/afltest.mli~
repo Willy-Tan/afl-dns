@@ -1,1 +1,0 @@
-val q_to_string : Dns.Packet.t -> ?index -> string;;

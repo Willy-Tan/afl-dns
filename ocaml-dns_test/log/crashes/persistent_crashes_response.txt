@@ -1,0 +1,435 @@
+This file contains what the parser reads from the CRASHES response corpora made by afl-fuzz.
+
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000000,sig:06,src:000000,op:flip1,pos:10
+Content : db42 8180 8001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Failure "parse_question: cls 22528")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000001,sig:06,src:000000,op:flip1,pos:13
+Content : db42 8180 0000 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Invalid_argument
+  "invalid bounds in Cstruct.BE.get_uint32 [44,1](67) off=0 len=4")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000002,sig:06,src:000000,op:flip1,pos:15
+Content : db42 8180 0001 8001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Invalid_argument
+  "invalid bounds in Cstruct.get_uint8 [54,0](67) off=0 len=1")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000003,sig:06,src:000000,op:flip1,pos:30
+Content : db42 8180 0001 0001 0000 0000 8377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Failure
+  "Name.parse_pointer: Cannot dereference pointer to (887) at position (12)")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000004,sig:06,src:000000,op:flip1,pos:30
+Content : db42 8180 0001 0001 0000 0000 2377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Failure "parse_question: cls 8465")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000005,sig:06,src:000000,op:flip1,pos:40
+Content : db42 8180 0001 0001 0000 0000 0377 7777 2c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Invalid_argument "Cstruct.shift [16,38](67) 45")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000006,sig:06,src:000000,op:flip1,pos:73
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e07 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Invalid_argument "Cstruct.sub: [52,2](67) off=1 len=17")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000007,sig:06,src:000000,op:flip1,pos:73
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e02 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Failure
+  "Name.parse_pointer: Cannot dereference pointer to (13568) at position (32)")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000008,sig:06,src:000000,op:flip1,pos:83
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7504 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Invalid_argument
+  "invalid bounds in Cstruct.BE.get_uint16 [45,9](67) off=8 len=2")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000009,sig:06,src:000000,op:flip1,pos:102
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0021 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Invalid_argument "Cstruct.shift [50,4](67) 6")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000010,sig:06,src:000000,op:flip1,pos:102
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0011 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Failure
+  "Name.parse_pointer: Cannot dereference pointer to (6945) at position (50)")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000011,sig:06,src:000000,op:flip1,pos:103
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0009 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Failure
+  "Name.parse_pointer: Cannot dereference pointer to (6945) at position (50)")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000012,sig:06,src:000000,op:flip1,pos:103
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0005 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Failure
+  "Name.parse_pointer: Cannot dereference pointer to (6945) at position (50)")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000013,sig:06,src:000000,op:flip1,pos:103
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0003 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Failure
+  "Name.parse_pointer: Cannot dereference pointer to (6945) at position (50)")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000014,sig:06,src:000000,op:flip1,pos:103
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0000 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception Dns__Packet.Not_implemented
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000015,sig:06,src:000000,op:flip1,pos:105
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 4001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Failure "parse_rr: unknown class")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000016,sig:06,src:000000,op:flip1,pos:108
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 0000 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Failure "parse_rr: unknown class")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000017,sig:06,src:000000,op:flip2,pos:5
+Content : db42 4180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Failure "bad opcode")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000018,sig:06,src:000000,op:flip2,pos:103
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0007 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Failure
+  "Name.parse_pointer: Cannot dereference pointer to (6945) at position (50)")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000019,sig:06,src:000000,op:flip2,pos:103
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0002 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Failure
+  "Name.parse_pointer: Cannot dereference pointer to (6945) at position (50)")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000020,sig:06,src:000000,op:flip4,pos:42
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c
+e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Invalid_argument "Cstruct.sub: [16,1](21) off=1 len=12")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000021,sig:06,src:000000,op:flip4,pos:45
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 
+f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Invalid_argument "Cstruct.sub: [16,2](22) off=1 len=12")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000022,sig:06,src:000000,op:arith8,pos:4,val:-22
+Content : db42
+8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Invalid_argument
+  "invalid bounds in Cstruct.BE.get_uint16 [0,2](2) off=2 len=2")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000023,sig:06,src:000000,op:arith8,pos:5,val:+10
+Content : db42 B180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Failure "bad opcode")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000024,sig:06,src:000000,op:arith8,pos:8,val:+18
+Content : db42 818B 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Failure "bad rcode")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000025,sig:06,src:000000,op:arith8,pos:90,val:+9
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 9001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Failure "parse_question: cls 36865")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000026,sig:06,src:000000,op:arith8,pos:103,val:+3
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0004 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Failure
+  "Name.parse_pointer: Cannot dereference pointer to (6945) at position (50)")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000027,sig:06,src:000000,op:arith8,pos:103,val:+5
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0006 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Failure
+  "Name.parse_pointer: Cannot dereference pointer to (6945) at position (50)")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000028,sig:06,src:000000,op:arith8,pos:103,val:+7
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0008 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Failure
+  "Name.parse_pointer: Cannot dereference pointer to (6945) at position (50)")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000029,sig:06,src:000000,op:arith8,pos:103,val:+16
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 000A 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception Dns__Packet.Not_implemented
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000030,sig:06,src:000000,op:arith8,pos:103,val:+17
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 000B 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Invalid_argument
+  "invalid bounds in Cstruct.get_uint8 [50,4](67) off=4 len=1")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000031,sig:06,src:000000,op:arith8,pos:103,val:+18
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 000C 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Failure
+  "Name.parse_pointer: Cannot dereference pointer to (6945) at position (50)")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000032,sig:06,src:000000,op:arith8,pos:103,val:+19
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 000D 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Invalid_argument "Cstruct.shift [50,4](67) 156")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000033,sig:06,src:000000,op:arith8,pos:103,val:+20
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 000E 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Failure
+  "Name.parse_pointer: Cannot dereference pointer to (6945) at position (50)")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000034,sig:06,src:000000,op:arith8,pos:103,val:+21
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 000F 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Invalid_argument "Cstruct.sub: [52,2](67) off=1 len=17")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000035,sig:06,src:000000,op:ext_AO,pos:95
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 0001 0001 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Failure "invalid RR class")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000036,sig:06,src:000000,op:havoc,rep:4
+Content : db42 8180 2 8 80 0001 0001 0000 00001 0001 0000 0000 0377 7777 0c6e 6f72 7468 00 0001 0001 c00c 0001 0001 0f72 7468 00 0001 0001 c
+
+Fatal error: exception (Failure "parse_question: cls 16")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000037,sig:06,src:000000,op:havoc,rep:2
+Content : db42 8180 0001 0001 00010000 0000 0377 7777 0c6e 6f72 746803 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Failure "parse_question: cls 30583")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000039,sig:06,src:000000,op:havoc,rep:4
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 00000000000000000000000007374 657200013 6564 7500 0001 0001 c00c 00010001 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Failure "parse_question: cls 0")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000040,sig:06,src:000000,op:havoc,rep:4
+Content : db42 8180 0001  001 00001000 0000 0377 7777 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 00144
+
+Fatal error: exception (Failure "parse_question: cls 30583")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000041,sig:06,src:000000,op:havoc,rep:4
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72  6572 6e03 6564 7500 0001 0001 42 801 0001 42180 0001c00c 0001 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Failure "parse_question: cls 8576")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000042,sig:06,src:000000,op:havoc,rep:2
+Content : db                     0 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 00068 6561 7374 6572 6e03 65640004 9b21 1144
+
+Fatal error: exception (Failure
+  "Name.parse_pointer: Cannot dereference pointer to (1670) at position (12)")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000043,sig:06,src:000000,op:havoc,rep:2
+Content : db42 8180 0001 0001 000 0000 0377 7777 0c6e 6f72 7468 6561 73001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Invalid_argument "Cstruct.sub: [12,30](52) off=1 len=55")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000044,sig:06,src:000000,op:havoc,rep:8
+Content : db40 1377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c0Cc 0001 b42 8180 00258 0004 9b21 1144
+
+Fatal error: exception (Failure
+  "Name.parse_pointer: Cannot dereference pointer to (9569) at position (12)")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000045,sig:06,src:000000,op:havoc,rep:4
+Content : db42 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Invalid_argument
+  "invalid bounds in Cstruct.BE.get_uint16 [30,8](47) off=8 len=2")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000046,sig:06,src:000000,op:havoc,rep:2
+Content : d0001b42 8180 0801 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Failure "parse_question: cls 30583")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000047,sig:06,src:000000,op:havoc,rep:2
+Content : db42 8d80 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 0001 0000 0258 00010004 9b21 1144
+
+Fatal error: exception (Invalid_argument
+  "invalid bounds in Cstruct.BE.get_uint32 [50,1](69) off=0 len=4")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000048,sig:06,src:000000,op:havoc,rep:64
+Content : 9bC1 1144
+
+Fatal error: exception (Invalid_argument
+  "invalid bounds in Cstruct.BE.get_uint16 [0,4](4) off=4 len=2")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000049,sig:06,src:000000,op:havoc,rep:8
+Content : db42 81258 0004 9b2 06564 75 572 6e03 650 0377 7777 0c6e 6f72 7468 6561 7374 6f6e 6f72 7468 6561 572 6e03 6564 7500 0001 0001 c00c 001 0001 0000 044
+
+Fatal error: exception (Failure
+  "Name.parse_pointer: Cannot dereference pointer to (12910) at position (12)")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000050,sig:06,src:000000,op:havoc,rep:4
+Content : db42 8777 0c6e 6f72 7468 6961 7376e 6f72 746 6564 7500 0001 0001 c00c
+0001 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Failure
+  "Name.parse_pointer: Cannot dereference pointer to (13174) at position (12)")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000051,sig:06,src:000000,op:havoc,rep:128
+Content : 80000081c00c
+
+Fatal error: exception (Invalid_argument
+  "invalid bounds in Cstruct.BE.get_uint16 [0,6](6) off=6 len=2")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000052,sig:06,src:000000,op:havoc,rep:2
+Content : db42 8180 0000258 1 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0005 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Invalid_argument
+  "invalid bounds in Cstruct.BE.get_uint16 [46,8](67) off=8 len=2")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000053,sig:06,src:000000,op:havoc,rep:2
+Content : db42 8180 0001 0001 0000 0000 0377 77d7 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c00cc 0001 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Invalid_argument "Cstruct.sub: [40,16](69) off=10 len=600")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000054,sig:06,src:000000,op:havoc,rep:4
+Content : db42 8180 00c00c01 0001 0000 0000 7468 6561 7374 6572 6e03 6564 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Failure "parse_question: cls 26725")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000055,sig:06,src:000000,op:havoc,rep:32
+Content : d00018180  001 0001
+0001 000 0001377 7777 06e 6fc00c4617777 06e 6fc00c4c677500 0ô01 8180  0 0001 81‹0  001 0001 0001€00c0 &258 0004 9b21 11/4
+
+Fatal error: exception (Invalid_argument
+  "invalid bounds in Cstruct.BE.get_uint16 [0,8](9) off=8 len=2")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000056,sig:06,src:000000,op:havoc,rep:2
+Content : db42 8180 0001 0D01 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 000c 0001 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Invalid_argument "Cstruct.sub: [39,11](62) off=10 len=8465")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000057,sig:06,src:000000,op:havoc,rep:4
+Content : db42 81800000 0377 7777 0001 0001 0000 000001377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 000000101 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Failure "invalid RR class")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000058,sig:06,src:000000,op:havoc,rep:2
+Content : db42 861 7374 65001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e0c00c3 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Failure "parse_question: cls 256")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000059,sig:06,src:000000,op:havoc,rep:2
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 001 0000 0258 0004 942 8180 0001 0001 0000 000b21 1144
+
+Fatal error: exception (Invalid_argument "Cstruct.sub: [40,22](77) off=10 len=17025")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000060,sig:06,src:000000,op:havoc,rep:2
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0009 0001 c00c 0001 00010009 0001 c00c 0001 0001 0000 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Invalid_argument "Cstruct.sub: [40,26](81) off=10 len=49164")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000061,sig:06,src:000000,op:havoc,rep:2
+Content : db42 8180 00c00c01 0001 0000 0000 3377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Failure "parse_question: cls 30583")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000062,sig:06,src:000000,op:havoc,rep:8
+Content : d0 0000 0377 77770001e 6f72 7464 7500 0001 00 1 c0c00c6e 6f72 7464 7500 0001 0001 9b21 1144
+
+Fatal error: exception (Failure
+  "Name.parse_pointer: Cannot dereference pointer to (1607) at position (12)")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000063,sig:06,src:000000,op:havoc,rep:2
+Content : db42 8180 0001 0001 0000 0000 00001377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 Cb21 1144
+
+Fatal error: exception (Failure "parse_question: cls 30583")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000064,sig:06,src:000000,op:havoc,rep:2
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e0000164 7500 0001 00010001c 0001 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Failure "parse_question: cls 18256")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000065,sig:06,src:000000,op:havoc,rep:2
+Content : db42 8180 0001 0001 0000 000e03 6564 7500 0001 0001 c00c 0 036564 7500 0001 0001 c00c 0 0377  6572 6e03 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+Fatal error: exception (Failure "invalid RR class")
+
+
+Reading file : ./forAFL/persistent_output/response_output/crashes/id:000066,sig:06,src:000000,op:havoc,rep:32
+Content : db42 818A 1 00000141 c00
+
+Fatal error: exception (Invalid_argument
+  "invalid bounds in Cstruct.BE.get_uint16 [0,10](12) off=10 len=2")
+
+

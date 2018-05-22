@@ -1,0 +1,687 @@
+This file contains what the parser reads from the valid query corpora made by afl-fuzz.
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000000,orig:query_orig
+Content : db4201000001000000000000037777770c6e6f7274686561737465726e036564750000010001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ra tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000001,orig:query_orig~
+Content : db42 0100 0001 0000 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ra tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000004,src:000000,op:flip1,pos:0,+cov
+Content : Db4201000001000000000000037777770c6e6f7274686561737465726e036564750000010001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ra tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000008,src:000000,op:flip1,pos:1,+cov
+Content : dB4201000001000000000000037777770c6e6f7274686561737465726e036564750000010001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ra tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000016,src:000000,op:flip1,pos:4,+cov
+Content : db4281000001000000000000037777770c6e6f7274686561737465726e036564750000010001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ra tc aa qr; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000017,src:000000,op:flip1,pos:4
+Content : db4221000001000000000000037777770c6e6f7274686561737465726e036564750000010001
+;; global options: 
+;; ->>HEADER<<- opcode: NOTIFY, status: NOERROR, id: 56130
+;; flags: ra tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000020,src:000000,op:flip1,pos:5,+cov
+Content : db4205000001000000000000037777770c6e6f7274686561737465726e036564750000010001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ra tc; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000021,src:000000,op:flip1,pos:5,+cov
+Content : db4203000001000000000000037777770c6e6f7274686561737465726e036564750000010001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ra aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000022,src:000000,op:flip1,pos:5,+cov
+Content : db4200000001000000000000037777770c6e6f7274686561737465726e036564750000010001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ra rd tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000024,src:000000,op:flip1,pos:6,+cov
+Content : db4201800001000000000000037777770c6e6f7274686561737465726e036564750000010001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000026,src:000000,op:flip1,pos:7,+cov
+Content : db4201080001000000000000037777770c6e6f7274686561737465726e036564750000010001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NXRRSET, id: 56130
+;; flags: ra tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000027,src:000000,op:flip1,pos:7,+cov
+Content : db4201040001000000000000037777770c6e6f7274686561737465726e036564750000010001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOTIMP, id: 56130
+;; flags: ra tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000028,src:000000,op:flip1,pos:7,+cov
+Content : db4201020001000000000000037777770c6e6f7274686561737465726e036564750000010001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: SERVFAIL, id: 56130
+;; flags: ra tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000029,src:000000,op:flip1,pos:7,+cov
+Content : db4201010001000000000000037777770c6e6f7274686561737465726e036564750000010001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: FORMERR, id: 56130
+;; flags: ra tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000034,src:000000,op:flip1,pos:11,+cov
+Content : db4201000000000000000000037777770c6e6f7274686561737465726e036564750000010001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ra tc aa; QUERY: 0, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000047,src:000000,op:flip1,pos:68,+cov
+Content : db4201000001000000000000037777770c6e6f7274686561737465726e036564750080010001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ra tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       DLV
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000048,src:000000,op:flip1,pos:68,+cov
+Content : db4201000001000000000000037777770c6e6f7274686561737465726e036564750040010001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ra tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       TYPE16385
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000049,src:000000,op:flip1,pos:70,+cov
+Content : db4201000001000000000000037777770c6e6f7274686561737465726e036564750000810001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ra tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       TYPE129
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000050,src:000000,op:flip1,pos:70,+cov
+Content : db4201000001000000000000037777770c6e6f7274686561737465726e036564750000410001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ra tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       TYPE065
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000051,src:000000,op:flip1,pos:70,+cov
+Content : db4201000001000000000000037777770c6e6f7274686561737465726e036564750000210001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ra tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       SRV
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000052,src:000000,op:flip1,pos:70,+cov
+Content : db4201000001000000000000037777770c6e6f7274686561737465726e036564750000110001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ra tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       RP
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000053,src:000000,op:flip1,pos:71,+cov
+Content : db4201000001000000000000037777770c6e6f7274686561737465726e036564750000090001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ra tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       MR
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000054,src:000000,op:flip1,pos:71,+cov
+Content : db4201000001000000000000037777770c6e6f7274686561737465726e036564750000050001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ra tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       CNAME
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000055,src:000000,op:flip1,pos:71,+cov
+Content : db4201000001000000000000037777770c6e6f7274686561737465726e036564750000030001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ra tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       MD
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000056,src:000000,op:flip1,pos:71,+cov
+Content : db4201000001000000000000037777770c6e6f7274686561737465726e036564750000000001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ra tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       TYPE000
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000057,src:000000,op:flip1,pos:72,+cov
+Content : db4201000001000000000000037777770c6e6f7274686561737465726e036564750000018001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ra tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000059,src:000000,op:flip2,pos:5
+Content : db4207000001000000000000037777770c6e6f7274686561737465726e036564750000010001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ra; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000060,src:000000,op:flip2,pos:5,+cov
+Content : db4202000001000000000000037777770c6e6f7274686561737465726e036564750000010001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ra rd aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000061,src:000000,op:flip2,pos:7,+cov
+Content : db4201060001000000000000037777770c6e6f7274686561737465726e036564750000010001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: YXDOMAIN, id: 56130
+;; flags: ra tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000062,src:000000,op:flip2,pos:7,+cov
+Content : db4201030001000000000000037777770c6e6f7274686561737465726e036564750000010001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NXDOMAIN, id: 56130
+;; flags: ra tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000065,src:000000,op:flip2,pos:71,+cov
+Content : db4201000001000000000000037777770c6e6f7274686561737465726e036564750000070001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ra tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       MB
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000066,src:000000,op:flip2,pos:71,+cov
+Content : db4201000001000000000000037777770c6e6f7274686561737465726e036564750000020001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ra tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       NS
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000071,src:000000,op:arith8,pos:5,val:+5
+Content : db4206000001000000000000037777770c6e6f7274686561737465726e036564750000010001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ra rd; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000072,src:000000,op:arith8,pos:7,val:+5,+cov
+Content : db4201050001000000000000037777770c6e6f7274686561737465726e036564750000010001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: REFUSED, id: 56130
+;; flags: ra tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000073,src:000000,op:arith8,pos:7,val:+7,+cov
+Content : db4201070001000000000000037777770c6e6f7274686561737465726e036564750000010001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: YXRRSET, id: 56130
+;; flags: ra tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000074,src:000000,op:arith8,pos:7,val:+9,+cov
+Content : db4201090001000000000000037777770c6e6f7274686561737465726e036564750000010001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOTAUTH, id: 56130
+;; flags: ra tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000075,src:000000,op:arith8,pos:7,val:+17,+cov
+Content : db42010A0001000000000000037777770c6e6f7274686561737465726e036564750000010001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOTZONE, id: 56130
+;; flags: ra tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000077,src:000000,op:arith8,pos:71,val:+3,+cov
+Content : db4201000001000000000000037777770c6e6f7274686561737465726e036564750000040001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ra tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       MF
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000078,src:000000,op:arith8,pos:71,val:+5,+cov
+Content : db4201000001000000000000037777770c6e6f7274686561737465726e036564750000060001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ra tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       SOA
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000079,src:000000,op:arith8,pos:71,val:+7,+cov
+Content : db4201000001000000000000037777770c6e6f7274686561737465726e036564750000080001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ra tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       MG
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000080,src:000000,op:arith8,pos:71,val:+16,+cov
+Content : db4201000001000000000000037777770c6e6f7274686561737465726e0365647500000A0001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ra tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       NULL
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000081,src:000000,op:arith8,pos:71,val:+17,+cov
+Content : db4201000001000000000000037777770c6e6f7274686561737465726e0365647500000B0001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ra tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       WKS
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000082,src:000000,op:arith8,pos:71,val:+18,+cov
+Content : db4201000001000000000000037777770c6e6f7274686561737465726e0365647500000C0001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ra tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       PTR
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000083,src:000000,op:arith8,pos:71,val:+19,+cov
+Content : db4201000001000000000000037777770c6e6f7274686561737465726e0365647500000D0001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ra tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       HINFO
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000084,src:000000,op:arith8,pos:71,val:+20,+cov
+Content : db4201000001000000000000037777770c6e6f7274686561737465726e0365647500000E0001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ra tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       MINFO
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000085,src:000000,op:arith8,pos:71,val:+21,+cov
+Content : db4201000001000000000000037777770c6e6f7274686561737465726e0365647500000F0001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ra tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       MX
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000092,src:000000,op:havoc,rep:2
+Content : db4201000001000000000000037777770c6e6f727468656100000000000000010001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ra tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northea                      IN       A
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000097,src:000000,op:havoc,rep:2
+Content : db4201000001000000000000037777770c6e6f72746865617374657200016e036500010000010001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ra tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeaster .n.e            IN       A
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000111,src:000000,op:havoc,rep:4
+Content : db42010000010000000000000377777000000000037777700000000000003777750000010001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ra tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;wwp                              CH       TYPE000
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000114,src:000016,op:arith8,pos:5,val:+3
+Content : db4284000001000000000000037777770c6e6f7274686561737465726e036564750000010001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ra rd tc qr; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000115,src:000024,op:flip1,pos:5,+cov
+Content : db4200800001000000000000037777770c6e6f7274686561737465726e036564750000010001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: rd tc aa; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000116,src:000024,op:flip1,pos:11
+Content : db4201800000000000000000037777770c6e6f7274686561737465726e036564750000010001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa; QUERY: 0, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+
+
+
+
+Reading file : ./forAFL/persistent_output/query_output/queue/id:000117,src:000024,op:flip2,pos:5,+cov
+Content : db4207800001000000000000037777770c6e6f7274686561737465726e036564750000010001
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+
+
+
+
