@@ -1,12 +1,11 @@
-====
-TODO
-====
+# TODO
 
-IMPORTANT :
+
+## IMPORTANT :
 - Use Crowbar instead of AflPersistent
 
 
-For ocaml-dns :
+## For ocaml-dns :
 - Current crashes/should-be-crashes pinpointed by afl-fuzz on Dns_packet.parse :
 	- Check if somewhere there is a test on the cstruct validity (Cstruct failures)
 	- Check if somewhere there is a test on alphanumeric/hyphens (some domain names 
@@ -16,9 +15,7 @@ For ocaml-dns :
 	- The resolver
 	- The server lookup
 
-------------------------------------------------------------------------------------------------
-
-For udns :
+## For udns :
 - DONE : Try to make afl-fuzz understand what is a crash and what isn't (monad type handling).
 - DONE : Cleanup the crash folder (on_hex raising errors)
 	-> Filtering done on the script 
@@ -27,8 +24,7 @@ For udns :
 	- The server lookup
 
 
-------------------------------------------------------------------------------------------------
-
+## Misc
 
 - As afl creates input that doesn't raise crashes, add an erasing block for the /queue directory
   on the .sh scripts
