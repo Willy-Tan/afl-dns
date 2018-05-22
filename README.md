@@ -12,7 +12,8 @@ Because it takes a long time for the fuzzer to go from a valid query packet to a
 response packet, I have decided to launch two fuzzers.
 
 In the long term, both should have some similar test cases in 
-```./[DNS_implementation]_test/forAFL/*_output/queue```
+```./[DNS_implementation]_test/forAFL/*_output/queue```.
+
 I don't know yet if it is coherent to do so.
 
 
