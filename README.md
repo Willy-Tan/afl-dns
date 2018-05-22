@@ -1,16 +1,11 @@
 # Fuzzing different dns implementations
 
-## Introduction
-
 This is a small attempt at fuzzing different dns implementations (ocaml-dns and udns).
-
 For now, fuzzing is done on the packet parser to see what goes through and what doesn't.
 
 Because it takes a long time for the fuzzer to go from a valid query packet to a valid
-response packet, I have decided to launch two fuzzers.
-
-In the long term, both should have some similar test cases in 
-```./[DNS_implementation]_test/forAFL/*_output/queue```.
+response packet, I have decided to launch two fuzzers. In the long term, both should have
+ some similar test cases in ```./[DNS_implementation]_test/forAFL/*_output/queue```.
 
 I don't know yet if it is coherent to do so.
 
