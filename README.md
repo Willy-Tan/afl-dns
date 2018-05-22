@@ -1,8 +1,8 @@
 Made by TAN Willy
 
-=====================================
+# fuzzing different dns implementations
 
-1) Introduction
+## Introduction
 
 This is a small attempt at fuzzing different dns implementations (ocaml-dns and udns).
 
@@ -15,7 +15,7 @@ In the long term, both should have some similar test cases in ./[DNS_implementat
 I don't know yet if it is coherent to do so.
 
 
-2) Scripts
+## Scripts
 
 To start the fuzzers, execute ./launch_afl.sh which launches two afl-fuzzers,
 one on query packet types, one on response packet types.
