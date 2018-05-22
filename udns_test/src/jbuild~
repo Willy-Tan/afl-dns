@@ -1,0 +1,6 @@
+(jbuild_version 1)
+
+(executable
+  ((name afltest)                 ; The name of your entry file, minus the .ml
+   (public_name afltest) ; Whatever you like, as far as I can tell
+   (libraries (udns afl-persistent))))         ; Express a dependency on the "lib" module

@@ -1,0 +1,1903 @@
+This file contains what the parser reads from the valid response corpora made by afl-fuzz.
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000000,orig:response_orig
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000003,src:000000,op:flip1,pos:0,+cov
+Content : Db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000007,src:000000,op:flip1,pos:1,+cov
+Content : dB42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000016,src:000000,op:flip1,pos:5,+cov
+Content : db42 0180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000019,src:000000,op:flip1,pos:6,+cov
+Content : db42 8580 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000020,src:000000,op:flip1,pos:6,+cov
+Content : db42 8380 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000021,src:000000,op:flip1,pos:6,+cov
+Content : db42 8080 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: rd tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000023,src:000000,op:flip1,pos:7,+cov
+Content : db42 8100 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ra tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000025,src:000000,op:flip1,pos:8,+cov
+Content : db42 8188 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NXRRSET, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000026,src:000000,op:flip1,pos:8,+cov
+Content : db42 8184 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOTIMP, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000027,src:000000,op:flip1,pos:8,+cov
+Content : db42 8182 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: SERVFAIL, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000028,src:000000,op:flip1,pos:8,+cov
+Content : db42 8181 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: FORMERR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000037,src:000000,op:flip1,pos:18,+cov
+Content : db42 8180 0001 0000 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c  0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000054,src:000000,op:flip1,pos:85,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 8001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       DLV
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000055,src:000000,op:flip1,pos:85,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 4001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       TYPE16385
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000056,src:000000,op:flip1,pos:87,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0081 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       TYPE129
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000057,src:000000,op:flip1,pos:87,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0041 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       TYPE065
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000058,src:000000,op:flip1,pos:87,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0021 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       SRV
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000059,src:000000,op:flip1,pos:87,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0011 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       RP
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000060,src:000000,op:flip1,pos:88,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0009 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       MR
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000061,src:000000,op:flip1,pos:88,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0005 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       CNAME
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000062,src:000000,op:flip1,pos:88,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0003 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       MD
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000063,src:000000,op:flip1,pos:88,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0000 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       TYPE000
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000064,src:000000,op:flip1,pos:90,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 8001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000065,src:000000,op:flip1,pos:100,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 8001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+;; ANSWER SECTION:
+unknown
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000066,src:000000,op:flip1,pos:102,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0041 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+;; ANSWER SECTION:
+unknown
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000067,src:000000,op:flip1,pos:110,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 0001 8000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+;; ANSWER SECTION:
+www.northeastern.edu     2147484248 IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000069,src:000000,op:flip2,pos:6,+cov
+Content : db42 8780 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000070,src:000000,op:flip2,pos:6,+cov
+Content : db42 8280 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: rd aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000071,src:000000,op:flip2,pos:8,+cov
+Content : db42 8186 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: YXDOMAIN, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000072,src:000000,op:flip2,pos:8,+cov
+Content : db42 8183 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NXDOMAIN, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000073,src:000000,op:flip2,pos:88,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0007 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       MB
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000074,src:000000,op:flip2,pos:88,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0002 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       NS
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000078,src:000000,op:arith8,pos:8,val:+5,+cov
+Content : db42 8185 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: REFUSED, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000079,src:000000,op:arith8,pos:8,val:+7,+cov
+Content : db42 8187 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: YXRRSET, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000080,src:000000,op:arith8,pos:8,val:+9,+cov
+Content : db42 8189 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOTAUTH, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000081,src:000000,op:arith8,pos:8,val:+17,+cov
+Content : db42 818A 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOTZONE, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000082,src:000000,op:arith8,pos:88,val:+3,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0004 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       MF
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000083,src:000000,op:arith8,pos:88,val:+5,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0006 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       SOA
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000084,src:000000,op:arith8,pos:88,val:+7,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0008 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       MG
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000085,src:000000,op:arith8,pos:88,val:+16,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 000A 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       NULL
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000086,src:000000,op:arith8,pos:88,val:+17,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 000B 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       WKS
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000087,src:000000,op:arith8,pos:88,val:+18,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 000C 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       PTR
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000088,src:000000,op:arith8,pos:88,val:+19,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 000D 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       HINFO
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000089,src:000000,op:arith8,pos:88,val:+20,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 000E 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       MINFO
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000090,src:000000,op:arith8,pos:88,val:+21,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 000F 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       MX
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000092,src:000000,op:int8,pos:3,val:+100
+Content : db4d 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56141
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000113,src:000000,op:havoc,rep:2
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6572 6e03 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northernedu                 IN       A
+
+;; ANSWER SECTION:
+www.northernedu         600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000114,src:000000,op:havoc,rep:64,+cov
+Content : fbc004 00000000000000000044
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 64448
+;; flags: ra rd tc; QUERY: 0, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000115,src:000016,op:flip2,pos:6,+cov
+Content : db42 0780 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000117,src:000023,op:arith8,pos:6,val:+3
+Content : db42 8400 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ra rd tc qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000118,src:000023,op:arith8,pos:6,val:+5
+Content : db42 8600 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0001 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: ra rd qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000119,src:000037,op:flip2,pos:83
+Content : db42 8180 0001 0000 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7506 0001 0001 c00c  0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu.  À          CS       TYPE256
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000120,src:000037,op:arith8,pos:83,val:+7
+Content : db42 8180 0001 0000 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7507 0001 0001 c00c  0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu.  À .           HS       TYPE600
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000122,src:000054,op:flip1,pos:13,+cov
+Content : db42 8180 0000 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 8001 0001 c00c  0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 0, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; ANSWER SECTION:
+unknown
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000123,src:000054,op:flip1,pos:88,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 8000 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       TA
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000124,src:000058,op:flip1,pos:88,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0029 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       OPT
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000125,src:000058,op:flip1,pos:88,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0025 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       CERT
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000126,src:000058,op:flip1,pos:88,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0023 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       NAPTR
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000127,src:000058,op:flip1,pos:88,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0020 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       NIMLOC
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000128,src:000058,op:flip2,pos:88,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0027 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       DNAME
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000129,src:000058,op:flip2,pos:88,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0022 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       ATMA
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000130,src:000058,op:arith8,pos:88,val:+3,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0024 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       KM
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000131,src:000058,op:arith8,pos:88,val:+5,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0026 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       A6
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000132,src:000058,op:arith8,pos:88,val:+7,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0028 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       SINK
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000133,src:000058,op:arith8,pos:88,val:+16,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 002A 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       APL
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000134,src:000058,op:arith8,pos:88,val:+17,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 002B 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       DS
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000135,src:000058,op:arith8,pos:88,val:+18,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 002C 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       SSHFP
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000136,src:000058,op:arith8,pos:88,val:+19,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 002D 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       IPSECKEY
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000137,src:000058,op:arith8,pos:88,val:+20,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 002E 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       RRSIG
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000138,src:000058,op:arith8,pos:88,val:+21,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 002F 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       NSEC
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000139,src:000059,op:flip1,pos:88,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0019 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       KEY
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000140,src:000059,op:flip1,pos:88,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0015 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       RT
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000141,src:000059,op:flip1,pos:88,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0013 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       X25
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000142,src:000059,op:flip1,pos:88,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0010 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       TXT
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000143,src:000059,op:flip2,pos:88,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0017 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       NSAPPTR
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000144,src:000059,op:flip2,pos:88,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0012 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       AFSDB
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000145,src:000059,op:arith8,pos:88,val:+3,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0014 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       ISDN
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000146,src:000059,op:arith8,pos:88,val:+5,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0016 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       NSAP
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000147,src:000059,op:arith8,pos:88,val:+7,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0018 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       SIG
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000148,src:000059,op:arith8,pos:88,val:+16,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 001A 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       PX
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000149,src:000059,op:arith8,pos:88,val:+17,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 001B 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       GPOS
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000150,src:000059,op:arith8,pos:88,val:+18,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 001C 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       AAAA
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000151,src:000059,op:arith8,pos:88,val:+20,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 001E 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       NXT
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000152,src:000059,op:arith8,pos:88,val:+21,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 001F 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       EID
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000153,src:000060,op:flip1,pos:13,+cov
+Content : db42 8180 0000 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0009 0001 c00c 0001 0001 0000 0258  9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 0, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; ANSWER SECTION:
+unknown
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000154,src:000061,op:flip1,pos:13,+cov
+Content : db42 8180 0000 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0005 0001 c00c 0001 0001 0000 0258  9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 0, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; ANSWER SECTION:
+www.northeastern.edu     3222011905 IN       CNAME    
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000155,src:000061,op:flip2,pos:87,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0065 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       UID
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000156,src:000062,op:flip1,pos:13,+cov
+Content : db42 8180 0000 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0003 0001 c00c 0001 0001 0000 0258  9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 0, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; ANSWER SECTION:
+unknown
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000157,src:000062,op:flip2,pos:87,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0063 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       SPF
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000158,src:000062,op:flip2,pos:87,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0033 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       NSEC3PARAM
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000159,src:000063,op:flip2,pos:87,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0030 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       DNSKEY
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000160,src:000067,op:havoc,rep:2
+Content : dc42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 00017500 0001 0001 c00c 0001 0001 8000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56386
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.ed .u           IN       A
+
+;; ANSWER SECTION:
+www.northeastern.ed .u   2147484248 IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000162,src:000072,op:havoc,rep:4
+Content : db42 8183 0001 0001 0000 0000 0377 61 72 0000 030001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NXDOMAIN, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;war                              IN       MD
+
+;; ANSWER SECTION:
+war                      600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000163,src:000073,op:flip1,pos:13,+cov
+Content : db42 8180 0000 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0007 0001 c00c 0001 0001 0000 0258  9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 0, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; ANSWER SECTION:
+unknown
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000164,src:000073,op:flip2,pos:87,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0067 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       UNSPEC
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000165,src:000074,op:flip1,pos:13,+cov
+Content : db42 8180 0000 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0002 0001 c00c 0001 0001 0000 0258  9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 0, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; ANSWER SECTION:
+www.northeastern.edu     3222011905 IN       NS       
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000166,src:000074,op:flip2,pos:87,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0032 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       NSEC3
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000167,src:000082,op:flip1,pos:13,+cov
+Content : db42 8180 0000 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0004 0001 c00c 0001 0001 0000 0258  9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 0, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; ANSWER SECTION:
+unknown
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000168,src:000082,op:flip2,pos:87,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0064 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       UINFO
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000169,src:000083,op:flip2,pos:87,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0066 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       GID
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000170,src:000084,op:flip1,pos:13,+cov
+Content : db42 8180 0000 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0008 0001 c00c 0001 0001 0000 0258  9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 0, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; ANSWER SECTION:
+unknown
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000171,src:000087,op:flip1,pos:13,+cov
+Content : db42 8180 0000 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 000C 0001 c00c 0001 0001 0000 0258  9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 0, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; ANSWER SECTION:
+unknown
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000172,src:000087,op:arith8,pos:87,val:+22,+cov
+Content : db42 8180 0001 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 00FC 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu             IN       AXFR
+
+;; ANSWER SECTION:
+www.northeastern.edu     600      IN       A        155.33.17.68
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000174,src:000114,op:flip1,pos:5
+Content : fbc006 00000000000000000044
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 64448
+;; flags: ra rd; QUERY: 0, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000175,src:000114,op:flip1,pos:8
+Content : fbc004 08000000000000000044
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NXRRSET, id: 64448
+;; flags: ra rd tc; QUERY: 0, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000177,src:000119,op:ext_AO,pos:97
+Content : db42 8180 0001 0000 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7506 0001 0001 c000010001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu.  À . .           HS       TYPE600
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000178,src:000119,op:ext_AO,pos:99
+Content : db42 8180 0001 0000 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7506 0001 0001 c00cc00c01 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;www.northeastern.edu.  À.www.northeastern.edu.  À          CS       TYPE256
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000179,src:000124,op:flip1,pos:13,+cov
+Content : db42 8180 0000 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0029 0001 c00c  0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 0, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; ANSWER SECTION:
+unknown
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000180,src:000138,op:flip1,pos:13,+cov
+Content : db42 8180 0000 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 002F 0001 c00c 0001 0001 0000 0258  9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 0, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; ANSWER SECTION:
+unknown
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000181,src:000141,op:flip1,pos:13,+cov
+Content : db42 8180 0000 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0013 0001 c00c 0001 0001 0000 0258  9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 0, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; ANSWER SECTION:
+unknown
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000182,src:000142,op:flip1,pos:13,+cov
+Content : db42 8180 0000 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0010 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 0, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; ANSWER SECTION:
+www.northeastern.edu     3222011905 IN       TXT      ""
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000183,src:000145,op:flip1,pos:13,+cov
+Content : db42 8180 0000 0001 0000 0000 0377 7777 0c6e 6f72 7468 6561 7374 6572 6e03 6564 7500 0014 0001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 0, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; ANSWER SECTION:
+unknown
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000184,src:000156,op:havoc,rep:2
+Content : db42 8180 0000 0001 0000 0000 0377 7777 0c6e 6f7738001572 6e03 6564 7500 0003 0001 c00c 0001 0001 0000 0258  9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NOERROR, id: 56130
+;; flags: tc aa qr; QUERY: 0, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; ANSWER SECTION:
+unknown
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000185,src:000162,op:flip1,pos:13
+Content : db42 8183 0000 0001 0000 0000 0377 61 72 0000 030001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NXDOMAIN, id: 56130
+;; flags: tc aa qr; QUERY: 0, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; ANSWER SECTION:
+unknown
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000186,src:000162,op:flip1,pos:18
+Content : db42 8183 0001 0000 0000 0000 0377 61 72 0000 030001 c00c 0001 0001 0000 0258 0004 9b21 1144
+
+;; global options: 
+;; ->>HEADER<<- opcode: STANDARD, status: NXDOMAIN, id: 56130
+;; flags: tc aa qr; QUERY: 1, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;war                              IN       MD
+
+
+
+
+
+Reading file : ./forAFL/response_output/queue/id:000187,src:000175,op:flip1,pos:4
+Content : fbc024 08000000000000000044
+
+;; global options: 
+;; ->>HEADER<<- opcode: NOTIFY, status: NXRRSET, id: 64448
+;; flags: ra rd tc; QUERY: 0, ANSWER: 0, AUTHORITY: 0, ADDITIONAL: 0
+
+
+
+
+

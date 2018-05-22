@@ -1,0 +1,13 @@
+(*Inspired by what Hannes did*)
+
+let main () =
+  let s = read_line () in
+  let testcase = Cstruct.of_hex s in
+  match Dns_packet.decode testcase with
+  | Ok (packet, n) -> Format.printf "%a\n\n" Dns_packet.pp packet
+  | Error e -> Format.printf "%a\n\n" Dns_packet.pp_err e
+
+;;
+
+
+let () = AflPersistent.run main;;
