@@ -27,7 +27,3 @@ what the parser reads from the valid corpora made by afl-fuzz.
 Execute ```./pp_crashes.sh``` to print in ```log/crashes/crashes_query.txt``` and 
 ```log/crashes/crashes_response.txt``` what the parser raises as an error from the crashes corpora
 made by afl-fuzz.
-
-## Made by
-
-* **TAN Willy**
