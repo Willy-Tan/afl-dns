@@ -1,6 +1,4 @@
-Made by TAN Willy
-
-# fuzzing different dns implementations
+# Fuzzing different dns implementations
 
 ## Introduction
 
@@ -30,3 +28,6 @@ Execute ```./pp_crashes.sh``` to print in ```log/crashes/crashes_query.txt``` an
 ```log/crashes/crashes_response.txt``` what the parser raises as an error from the crashes corpora
 made by afl-fuzz.
 
+## Made by
+
+* **TAN Willy**
