@@ -1,8 +1,6 @@
 Made by TAN Willy
 
 =====================================
-fuzzing different dns implementations
-=====================================
 
 1) Introduction
 
