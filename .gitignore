@@ -8,7 +8,7 @@
 *.cmxs
 *.merlin
 *.cmxa
-
+*output/*_output/*
 # ocamlbuild working directory
 _build/
 
