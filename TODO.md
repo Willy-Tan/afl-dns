@@ -28,4 +28,4 @@
 
 - As afl creates input that doesn't raise crashes, add an erasing block for the /queue directory
   on the .sh scripts
-
+- Have a better log system for crowbar

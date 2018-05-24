@@ -4,14 +4,13 @@
   ((name crowbar_test)                 ; The name of your entry file, minus the .ml
    (public_name crowbar_test) ; Whatever you like, as far as I can tell
    (modules (crowbar_test))
-   (libraries (crowbar dns afl-persistent astring ))))         ; Express a dependency on the "lib" module
+   (libraries (crowbar cstruct dns afl-persistent astring ipaddr))
+   (preprocess (pps (ppx_deriving.std ppx_deriving_crowbar ppx_cstruct)))))         ; Express a dependency on the "lib" module
 
 (executable
   ((name persistent_test)                 ; The name of your entry file, minus the .ml
    (public_name persistent_test) ; Whatever you like, as far as I can tell
    (modules (persistent_test))
-   (libraries (crowbar dns afl-persistent astring ))))         ; Express a dependency on the "lib" module
-
-
-
+   (libraries (crowbar cstruct dns afl-persistent astring ipaddr))
+   (preprocess (pps (ppx_deriving.std ppx_deriving_crowbar ppx_cstruct)))))         ; Express a dependency on the "lib" module
 

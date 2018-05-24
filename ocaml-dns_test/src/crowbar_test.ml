@@ -1,18 +1,9 @@
-(*TODO : Packet generator*)
+(*--------------------------------------------------------------------*)
 
-
-(*Cstruct generator*)
-
-let cstruct =
-  Crowbar.map [Crowbar.bytes] (fun a ->
-      try
-        Cstruct.of_string a
-      with
-        _ -> Printf.printf "?\n"; print_endline a; Crowbar.bad_test ());;
-
-(*Pretty-printer*)
+(*Packet pretty-printer*)
 let pp_packet ppf parsed = Crowbar.pp ppf "%s" (Dns.Dig.string_of_answers parsed);;
 
+(*--------------------------------------------------------------------*)
 
 (*--Test on the domain name label specifically--*)
 
@@ -28,10 +19,11 @@ let name_is_valid qname =
     | _-> false
   in
   (*Apply the char check to label, no hyphen at the beginning, restricted length*)
-  let label_is_valid label =
-    Astring.String.for_all char_is_valid label
-    && label.[0] <> '-'
-    && String.length label <= 63
+  let label_is_valid label = match String.length label with
+    |0 -> false
+    | _ -> (Astring.String.for_all char_is_valid label
+           && label.[0] <> '-'
+           && String.length label <= 63)
   in
   (*Apply the label check to every label, whole length should be less than 253*)
   let whole_length list =
@@ -46,8 +38,9 @@ let name_is_valid qname =
 
 
 (*Get qname from a DNS packet*)
-let get_qname ?(index=0) Dns.Packet.{id; detail; questions; answers; authorities; additionals} =
-  (List.nth questions index).q_name;;
+let get_qname ?(index=0) Dns.Packet.{id; detail; questions; answers; authorities; additionals} = match questions with
+  |[] -> Crowbar.bad_test ()
+  | _ -> (List.nth questions index).q_name;;
 
 (*Crowbar test*)
 let qname_check packet =
@@ -55,15 +48,59 @@ let qname_check packet =
   Crowbar.check (name_is_valid qname);;
                                                 
 let qname_test () =
-  Crowbar.add_test ~name:"Ocaml-dns parser" [cstruct] @@ (fun cstr ->
-  let packet = Dns.Packet.parse cstr in
-  (Printf.printf "%s\n\n %!" @@ Dns.Dig.string_of_answers packet;
-  qname_check packet));;
+  Crowbar.add_test ~name:"Ocaml-dns parser" [Dns.Packet.to_crowbar] @@ qname_check;;
+ 
+(*Name generation printing*)
+let name_test () =
+  Crowbar.add_test ~name:"Dns.Name test" [Dns.Name.to_crowbar] @@
+  (fun a ->
+      Printf.printf "%s\n" @@ Dns.Name.to_string a;
+      Crowbar.check true);;
 
-let is_positive n = (n >= 0);;
+(*Question generation printing*)
+let question_print () =
+  Crowbar.add_test ~name:"Dns.Packet.question test" [Dns.Packet.question_to_crowbar] @@
+  (fun a ->
+      Printf.printf "%s\n\n" @@ Dns.Packet.question_to_string a;
+      Crowbar.check true);;
 
-let simple_test () =
-  Crowbar.add_test ~name:"Int test" [Crowbar.uint8] @@ (fun int -> Printf.printf "%d\n" int; Crowbar.check (is_positive int));;
+(*Question list generation printing*)
+let questions_print () =
+  Crowbar.add_test ~name:"Dns.Packet.t.questions test" [Dns.Packet.to_crowbar] @@
+  (fun a ->
+      Printf.printf "question list size : %d\n" @@ List.length a.questions;
+      Dns.Packet.print_question a.questions;
+      Crowbar.check (true));;
+
+(*Packet generation printing*)
+let packet_print () =
+  Crowbar.add_test ~name:"Packet generation test" [Dns.Packet.to_crowbar] @@
+  (fun a ->
+     Printf.printf "%s\n\n %!" @@ Dns.Dig.string_of_answers a);;
+
+(*packet marshalling and parsing test*)
+
+let counter = ref 1;;
+
+let marshal_parsing_test () =
+  Crowbar.add_test ~name:"Marshalling test" [Dns.Packet.to_crowbar] @@
+  (fun initial ->
+     incr counter;
+     let processed = 
+     try
+       Dns.Packet.parse (Dns.Packet.marshal initial)
+     with
+     |_ ->
+       (*let msg = Printexc.to_string e
+       and stack = Printexc.get_backtrace () in
+         Printf.eprintf "Error : %s \n%s \n" msg stack;*)
+       Crowbar.bad_test ()
+     in
+     Printf.printf "Attempt N. %d : \n" !counter;
+     Printf.printf "%s\n\n" @@ Dns.Dig.string_of_answers processed;
+     Printf.printf "--------------------------------------------------------\n\n";
+     Crowbar.check_eq ~pp:pp_packet initial processed) ;;
+
 
 let () =
-  simple_test ();;
+  marshal_parsing_test ();;

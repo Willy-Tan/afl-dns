@@ -1,0 +1,21 @@
+lib: [
+  "_build/install/default/lib/ppx_cstruct/META" {"META"}
+  "_build/install/default/lib/ppx_cstruct/opam" {"opam"}
+  "_build/install/default/lib/ppx_cstruct/ppx_cstruct.cmi" {"ppx_cstruct.cmi"}
+  "_build/install/default/lib/ppx_cstruct/ppx_cstruct.cmx" {"ppx_cstruct.cmx"}
+  "_build/install/default/lib/ppx_cstruct/ppx_cstruct.cmt" {"ppx_cstruct.cmt"}
+  "_build/install/default/lib/ppx_cstruct/ppx_cstruct.ml" {"ppx_cstruct.ml"}
+  "_build/install/default/lib/ppx_cstruct/ppx_cstruct.cma" {"ppx_cstruct.cma"}
+  "_build/install/default/lib/ppx_cstruct/ppx_cstruct.cmxa" {"ppx_cstruct.cmxa"}
+  "_build/install/default/lib/ppx_cstruct/ppx_cstruct.a" {"ppx_cstruct.a"}
+  "_build/install/default/lib/ppx_cstruct/ppx_cstruct.cmxs" {"ppx_cstruct.cmxs"}
+  "_build/install/default/lib/ppx_cstruct/ppx_cstruct.dune" {"ppx_cstruct.dune"}
+]
+libexec: [
+  "_build/install/default/lib/ppx_cstruct/ppx.exe" {"ppx.exe"}
+]
+doc: [
+  "_build/install/default/doc/ppx_cstruct/README.md"
+  "_build/install/default/doc/ppx_cstruct/LICENSE.md"
+  "_build/install/default/doc/ppx_cstruct/CHANGES.md"
+]

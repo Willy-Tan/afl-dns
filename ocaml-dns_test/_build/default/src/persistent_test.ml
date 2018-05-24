@@ -10,6 +10,8 @@ let main () =
   match testcase with
   | None -> ()
   | Some cstr -> 
-    Printf.printf "%s\n\n" (Dns.Dig.string_of_answers (Dns.Packet.parse cstr));;
+    (Printf.printf "%s\n" (Cstruct.to_string cstr);
+    Printf.printf "%s\n\n" (Dns.Dig.string_of_answers (Dns.Packet.parse (Dns.Packet.marshal ((Dns.Packet.parse cstr))))));;
 
 let () = AflPersistent.run main;;
+

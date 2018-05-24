@@ -63,16 +63,16 @@ fi
 
 if [ $ASK_QUERY == "foo" ] || [ $ASK_QUERY = "n" ]
 then
-	xterm -hold -title "Query-type fuzzing" -geometry 80x25+0+0 -fa monospace -fs 9 -e "afl-fuzz -i $QUERY_INP -o $QUERY_OUT $AFLTEST @@" &
+	xterm -hold -title "Query-type fuzzing" -geometry 80x25+0+0 -fa monospace -fs 9 -e "afl-fuzz -m 4000 -i $QUERY_INP -o $QUERY_OUT $AFLTEST @@" &
 else
-	xterm -hold -title "Query-type fuzzing" -geometry 80x25+0+0 -fa monospace -fs 9 -e "afl-fuzz -i - -o $QUERY_OUT $AFLTEST @@" &
+	xterm -hold -title "Query-type fuzzing" -geometry 80x25+0+0 -fa monospace -fs 9 -e "afl-fuzz -m 4000 -i - -o $QUERY_OUT $AFLTEST @@" &
 fi	
 
 #Response-type fuzzing
 
 if [ $ASK_RESPONSE == "bar" ] || [ $ASK_RESPONSE == "n" ]
 then
-	xterm -hold -title "Response-type fuzzing" -geometry 80x25+800+0 -fa monospace -fs 9 -e "afl-fuzz -i $RESPONSE_INP -o $RESPONSE_OUT $AFLTEST @@" &
+	xterm -hold -title "Response-type fuzzing" -geometry 80x25+800+0 -fa monospace -fs 9 -e "afl-fuzz -m 4000 -i $RESPONSE_INP -o $RESPONSE_OUT $AFLTEST @@" &
 else
-	xterm -hold -title "Response-type fuzzing" -geometry 80x25+800+0 -fa monospace -fs 9 -e "afl-fuzz -i - -o $RESPONSE_OUT $AFLTEST @@" &
+	xterm -hold -title "Response-type fuzzing" -geometry 80x25+800+0 -fa monospace -fs 9 -e "afl-fuzz -m 4000 -i - -o $RESPONSE_OUT $AFLTEST @@" &
 fi 

@@ -1,8 +1,0 @@
-lib: [
-  "_build/install/default/lib/afltest/META" {"META"}
-  "_build/install/default/lib/afltest/opam" {"opam"}
-]
-bin: [
-  "_build/install/default/bin/crowbar_test" {"crowbar_test"}
-  "_build/install/default/bin/persistent_test" {"persistent_test"}
-]
