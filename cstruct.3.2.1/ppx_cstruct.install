@@ -16,6 +16,4 @@ libexec: [
 ]
 doc: [
   "_build/install/default/doc/ppx_cstruct/README.md"
-  "_build/install/default/doc/ppx_cstruct/LICENSE.md"
-  "_build/install/default/doc/ppx_cstruct/CHANGES.md"
 ]

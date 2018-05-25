@@ -4,55 +4,30 @@
 
 #Define directory variables
 
-QUERY_INP=./forAFL/query_input
-QUERY_OUT=./forAFL/crowbar_output/query_output
-
-RESPONSE_INP=./forAFL/response_input
-RESPONSE_OUT=./forAFL/crowbar_output/response_output
+INP=./forAFL/query_input
+OUT=./forAFL/crowbar_output
 
 AFLTEST=./_build/install/default/bin/crowbar_test
 
-ASK_QUERY="foo"
-ASK_RESPONSE="bar"
+ASK="foo"
 
 #Test if some query output already exists
 
 
-if [ -n "$(ls -A $QUERY_OUT)" ]
+if [ -n "$(ls -A $OUT)" ]
 then
-	while [ $ASK_QUERY != "Y" ] && [ $ASK_QUERY != "n" ]
+	while [ $ASK != "Y" ] && [ $ASK != "n" ]
 	do
-		read -p "Some data already exists in the query output folder, would you like to resume afl on it ? (Y/n) " ASK_QUERY
-		if [ $ASK_QUERY != "Y" ] && [ $ASK_QUERY != "n" ]
+		read -p "Some data already exists in the output folder, would you like to resume afl on it ? (Y/n) " ASK
+		if [ $ASK != "Y" ] && [ $ASK != "n" ]
 		then
 			printf "You didn't write Y or n...\n"
 		fi
 	done
 
-	if [ $ASK_QUERY = "Y" ]
+	if [ $ASK = "Y" ]
 	then
 		printf "Precedent query-type fuzzing will be resumed. \n\n"
-	else
-		printf "Old data will be erased. \n\n"
-	fi
-fi
-
-#Test if some response output already exists
-
-if [ -n "$(ls -A $RESPONSE_OUT)" ]
-then
-	while [ $ASK_RESPONSE != "Y" ] && [ $ASK_RESPONSE != "n" ]
-	do
-		read -p "Some data already exists in the response output folder, would you like to resume afl on it ? (Y/n) " ASK_RESPONSE
-		if [ $ASK_RESPONSE != "Y" ] && [ $ASK_RESPONSE != "n" ]
-		then
-			printf "You didn't write Y or n...\n"
-		fi
-	done
-
-	if [ $ASK_RESPONSE = "Y" ]
-	then
-		printf "Precedent RESPONSE-type fuzzing will be resumed. \n\n"
 	else
 		printf "Old data will be erased. \n\n"
 	fi
@@ -61,18 +36,9 @@ fi
 
 #Query-type fuzzing
 
-if [ $ASK_QUERY == "foo" ] || [ $ASK_QUERY = "n" ]
+if [ $ASK == "foo" ] || [ $ASK = "n" ]
 then
-	xterm -hold -title "Query-type fuzzing" -geometry 80x25+0+0 -fa monospace -fs 9 -e "afl-fuzz -m 4000 -i $QUERY_INP -o $QUERY_OUT $AFLTEST @@" &
+	xterm -hold -title "Query-type fuzzing" -geometry 80x25+0+0 -fa monospace -fs 13 -e "afl-fuzz -m 4000 -i $INP -o $OUT $AFLTEST @@" &
 else
-	xterm -hold -title "Query-type fuzzing" -geometry 80x25+0+0 -fa monospace -fs 9 -e "afl-fuzz -m 4000 -i - -o $QUERY_OUT $AFLTEST @@" &
+	xterm -hold -title "Query-type fuzzing" -geometry 80x25+0+0 -fa monospace -fs 13 -e "afl-fuzz -m 4000 -i - -o $OUT $AFLTEST @@" &
 fi	
-
-#Response-type fuzzing
-
-if [ $ASK_RESPONSE == "bar" ] || [ $ASK_RESPONSE == "n" ]
-then
-	xterm -hold -title "Response-type fuzzing" -geometry 80x25+800+0 -fa monospace -fs 9 -e "afl-fuzz -m 4000 -i $RESPONSE_INP -o $RESPONSE_OUT $AFLTEST @@" &
-else
-	xterm -hold -title "Response-type fuzzing" -geometry 80x25+800+0 -fa monospace -fs 9 -e "afl-fuzz -m 4000 -i - -o $RESPONSE_OUT $AFLTEST @@" &
-fi 

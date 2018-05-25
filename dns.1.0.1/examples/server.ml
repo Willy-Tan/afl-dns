@@ -22,12 +22,12 @@ let lookup ~src ~dst packet =
       let rrs = [ { name = q_name; cls = RR_IN; flush = false; ttl = 0l; rdata = A ip } ] in
       Lwt.return (Some (Dns.Query.({ rcode = NoError; aa = true; answer = rrs; authority = []; additional = [] })))
     end else begin
-      Lwt_io.printf "DNS: %s returning NXDOMAIN\n" (to_string packet)
+      Lwt_io.printf "DNS: %s returning NXDOMAIN\n" (Dns.Dig.string_of_answers packet)
       >>= fun () ->
       Lwt.return (Some nxdomain)
     end
   | _ ->
-    Lwt_io.printf "DNS: %s returning NXDOMAIN\n" (to_string packet)
+    Lwt_io.printf "DNS: %s returning NXDOMAIN\n" (Dns.Dig.string_of_answers packet)
     >>= fun () ->
     Lwt.return (Some nxdomain)
 

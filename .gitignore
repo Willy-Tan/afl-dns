@@ -11,6 +11,10 @@
 
 query_output/*
 response_output/*
+crowbar_output/*
+result.txt
+errors.txt
+test.txt
 
 # ocamlbuild working directory
 _build/
@@ -23,3 +27,4 @@ _build/
 # oasis generated files
 setup.data
 setup.log
+

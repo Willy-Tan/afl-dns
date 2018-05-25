@@ -2,8 +2,8 @@
 
 
 ## IMPORTANT :
-- Use Crowbar instead of AflPersistent
-
+- DONE : Use Crowbar and AflPersistent
+- Make a better packet generator on Crowbar
 
 ## For ocaml-dns :
 - Current crashes/should-be-crashes pinpointed by afl-fuzz on Dns_packet.parse :

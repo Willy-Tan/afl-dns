@@ -376,7 +376,51 @@ type rdata =
   | WKS of ipv4 * Cstruct.byte * string
   | X25 of string
   | EDNS0 of (int * int * bool * ((int * string) list))
-[@@deriving crowbar]
+  (*[@@deriving crowbar]*)
+             
+(*Uncomment the former to have a fully working generator.
+I've made a custom Crowbar generator for debugging purposes
+TYPES SUPPORTED FOR PRINTING :
+A
+AAAA
+SOA
+MX
+CNAME
+NS
+TXT
+*)
+
+let rdata_to_crowbar =
+  Crowbar.choose [
+    Crowbar.map [ipv4_to_crowbar] @@ (fun ip -> A ip);
+    Crowbar.map [ipv6_to_crowbar] @@ (fun ip -> AAAA ip);
+    Crowbar.map [Name.to_crowbar;Name.to_crowbar;Crowbar.int32;Crowbar.int32;Crowbar.int32;Crowbar.int32;Crowbar.int32] @@ (fun name1 name2 int1 int2 int3 int4 int5 -> SOA (name1,name2,int1,int2,int3,int4,int5));
+    Crowbar.map [Cstruct.uint16_to_crowbar;Name.to_crowbar] @@ (fun uint16 name -> MX (uint16, name));
+    Crowbar.map [Name.to_crowbar] @@ (fun name -> CNAME name);
+    Crowbar.map [Name.to_crowbar] @@ (fun name -> NS name);
+    Crowbar.map [Name.to_crowbar] @@ (fun name -> TXT (Name.to_string_list name));
+  ]
+;;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 let hex_of_string in_str =
   let out_str = ref "" in
@@ -1727,6 +1771,7 @@ let rec print_question (questions : questions) = match questions with
 
 let to_crowbar =
   let id = Crowbar.int in
+  (*let id = Crowbar.range 65535 in*) 
   let detail = detail_to_crowbar in
   let questions = questions_to_crowbar in
   let answers = Crowbar.list1 rr_to_crowbar in

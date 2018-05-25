@@ -82,24 +82,42 @@ let packet_print () =
 
 let counter = ref 1;;
 
+
 let marshal_parsing_test () =
   Crowbar.add_test ~name:"Marshalling test" [Dns.Packet.to_crowbar] @@
   (fun initial ->
      incr counter;
-     let processed = 
-     try
-       Dns.Packet.parse (Dns.Packet.marshal initial)
-     with
-     |_ ->
-       (*let msg = Printexc.to_string e
-       and stack = Printexc.get_backtrace () in
-         Printf.eprintf "Error : %s \n%s \n" msg stack;*)
-       Crowbar.bad_test ()
+     let marshalled =
+       try
+         Dns.Packet.marshal initial
+       with
+       |e ->
+         let msg = Printexc.to_string e
+         and stack = Printexc.get_backtrace () in
+         Printf.eprintf "Marshal error : %s \n%s \n" msg stack;
+         Crowbar.bad_test ()
      in
-     Printf.printf "Attempt N. %d : \n" !counter;
-     Printf.printf "%s\n\n" @@ Dns.Dig.string_of_answers processed;
-     Printf.printf "--------------------------------------------------------\n\n";
-     Crowbar.check_eq ~pp:pp_packet initial processed) ;;
+     let processed = 
+       try
+         Dns.Packet.parse marshalled
+       with
+       |e ->
+         let msg = Printexc.to_string e
+         and stack = Printexc.get_backtrace () in
+         Printf.eprintf "Parse error : %s \n%s \n" msg stack;
+         Crowbar.bad_test ()
+     in
+     let oc = open_out_gen [Open_creat; Open_text; Open_append] 0o644 "result.txt" in
+     let buffer = Buffer.create 256 in
+     Cstruct.hexdump_to_buffer buffer marshalled;
+     Printf.fprintf oc "Attempt N. %d : \n\n" !counter;
+     Printf.fprintf oc "Hexdump : \n %s" @@ Buffer.contents buffer;
+     Printf.fprintf oc "Initial :\n %s\n\n %!" @@ Dns.Dig.string_of_answers initial;
+     Printf.fprintf oc "Marshalled :\n %s\n\n %!" @@ Dns.Dig.string_of_answers processed;
+     Printf.fprintf oc "--------------------------------------------------------\n\n";
+     close_out oc;
+     (*Crowbar.check_eq ~pp:pp_packet initial processed)*)
+     Crowbar.check (true));;
 
 
 let () =

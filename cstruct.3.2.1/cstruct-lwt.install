@@ -1,0 +1,18 @@
+lib: [
+  "_build/install/default/lib/cstruct-lwt/META" {"META"}
+  "_build/install/default/lib/cstruct-lwt/opam" {"opam"}
+  "_build/install/default/lib/cstruct-lwt/lwt_cstruct.cmi" {"lwt_cstruct.cmi"}
+  "_build/install/default/lib/cstruct-lwt/lwt_cstruct.cmx" {"lwt_cstruct.cmx"}
+  "_build/install/default/lib/cstruct-lwt/lwt_cstruct.cmt" {"lwt_cstruct.cmt"}
+  "_build/install/default/lib/cstruct-lwt/lwt_cstruct.cmti" {"lwt_cstruct.cmti"}
+  "_build/install/default/lib/cstruct-lwt/lwt_cstruct.mli" {"lwt_cstruct.mli"}
+  "_build/install/default/lib/cstruct-lwt/lwt_cstruct.ml" {"lwt_cstruct.ml"}
+  "_build/install/default/lib/cstruct-lwt/cstruct_lwt.cma" {"cstruct_lwt.cma"}
+  "_build/install/default/lib/cstruct-lwt/cstruct_lwt.cmxa" {"cstruct_lwt.cmxa"}
+  "_build/install/default/lib/cstruct-lwt/cstruct_lwt.a" {"cstruct_lwt.a"}
+  "_build/install/default/lib/cstruct-lwt/cstruct_lwt.cmxs" {"cstruct_lwt.cmxs"}
+  "_build/install/default/lib/cstruct-lwt/cstruct-lwt.dune" {"cstruct-lwt.dune"}
+]
+doc: [
+  "_build/install/default/doc/cstruct-lwt/README.md"
+]
