@@ -164,6 +164,7 @@ type rr_type =
   [@@uint8_t]
 ]
 
+
 let rr_type_to_crowbar =
   Crowbar.choose [
     Crowbar.const RR_UNUSED;
@@ -401,18 +402,6 @@ let rdata_to_crowbar =
     Crowbar.map [Name.to_crowbar] @@ (fun name -> TXT (Name.to_string_list name));
   ]
 ;;
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

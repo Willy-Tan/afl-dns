@@ -1,31 +1,4 @@
 
-(*
-FIRST EXAMPLE :
-Big issue there : the parsing/marshalling allows byte-type characters ! No errors were raised when the functions were used and I could print the packets content.
-Another bug is that the marshal function truncates the ID without raising any error : it goes from 2052809539767302648 to 63992. It isn't really important for standard uses, but the parse function should be mathematically speaking the inverse of the marshal function and it doesn't stand true here.
-*)
-
-(*Initial packet*)
-
-;; global options: 
-;; ->>HEADER<<- opcode: RESERVED, status: SERVFAIL, id: 2052809539767302648
-;; flags: ra tc qr; QUERY: 1, ANSWER: 1, AUTHORITY: 1, ADDITIONAL: 1
-
-;; QUESTION SECTION:
-;†YÈDÿ{™Ñ<bFg8ï                 ANY_CLS  RRSIG
-
-;; ANSWER SECTION:
-;r? ØŽšžÒíd*Ïpr€GÐ6½¬ÔL_žÐ˜”? 64595568 RR_ANY   AAAA     fff9:3ab8:dadb:7f4e:f2ed:6c90:d8df:cd70
-
-;; AUTHORITY SECTION:
-Æ]ú²“Y3ˆÛt¡             4012144386 CS       A        7.132.65.241
-
-;; ADDITIONAL SECTION:
-Žõ6©ÁA´ÄW•œ€C|¢?sµt‚gúª$z9®+ô:uà­þ 2558792113 RR_ANY   TXT      "\161\184\193\029\210\235F(m|\162X9\022\238\226\192d\209\003s\176Lj\165\250\027\198\248\"\138\170.\175\197\016er\219\158e\164z\164\006\147\210\205V\173\185\136O\225\224O\168\250\202\189\002\215\217\160"
-
-
-    !=
-
 (*Marshalled then parsed packet*)
 
     ;; global options: 
@@ -43,63 +16,3 @@ Another bug is that the marshal function truncates the ID without raising any er
 
 ;; ADDITIONAL SECTION:
 Žõ6©ÁA´ÄW•œ€C|¢?sµt‚gúª$z9®+ô:uà­þ 2558792113 RR_ANY   TXT      "\161\184\193\029\210\235F(m|\162X9\022\238\226\192d\209\003s\176Lj\165\250\027\198\248\"\138\170.\175\197\016er\219\158e\164z\164\006\147\210\205V\173\185\136O\225\224O\168\250\202\189\002\215\217\160"
-
-
-
-(*-------------------------------------------------------------------------*)
-
-(*
-SECOND EXAMPLE:
-I restricted the ID generator so that it won't differ from the initial packet to the marshalled one, I still found some bugs :
-- On the header, the status field changed mysteriously from BADKEY to FORMERR
-- The MX pref integer, initially not on 16 bits (-3725071272753488326), was allowed to go through the marshal function (otherwise it wouldn't have printed the test) and changed to a 16 bit integer (7738)
-*)
-
-
-(*INITIAL PACKET GENERATED FROM CROWBAR*)
-
-;; global options: 
-;; ->>HEADER<<- opcode: UPDATE, status: BADKEY, id: 31340
-;; flags: ra rd tc; QUERY: 1, ANSWER: 1, AUTHORITY: 4, ADDITIONAL: 2
-
-   ;; QUESTION SECTION:
-;marcel.marquis.com               ANY_CLS  SPF
-
-;; ANSWER SECTION:
-marcel.marquis.com       2342515484 RR_ANY   CNAME    tata.yoyo.gouv
-
-;; AUTHORITY SECTION:
-bonjour.hello.mario      3258888399 CH       TXT      "marcelmarquiscom"
-marcel.marquis.com       4211563955 HS       AAAA     f75f:18d8:7fff:886e:9fff:f8dc:bbeb:846d
-msdn.mug.high.quality.purposes.somewhere 277291508 CH       AAAA     6ffd:7157:e9f5:27d4:26ef:6c57:37e8:d19e
-tata.yoyo.gouv           1921186043 CH       A        197.177.220.251
-
-;; ADDITIONAL SECTION:
-tata.yoyo.gouv           3817300438 IN       MX       -3725071272753488326 marcel.marquis.com
-bonjour.hello.mario      3284019278 CS       NS       bonjour.hello.mario
-
-
-    !=
-
-(*MARSHALLED THEN PARSED PACKET *)
-
-
-    ;; global options: 
-;; ->>HEADER<<- opcode: UPDATE, status: FORMERR, id: 31340
-;; flags: ra rd tc; QUERY: 1, ANSWER: 1, AUTHORITY: 4, ADDITIONAL: 2
-
-;; QUESTION SECTION:
-;marcel.marquis.com               ANY_CLS  SPF
-
-;; ANSWER SECTION:
-marcel.marquis.com       2342515484 RR_ANY   CNAME    tata.yoyo.gouv
-
-;; AUTHORITY SECTION:
-bonjour.hello.mario      3258888399 CH       TXT      "marcelmarquiscom"
-marcel.marquis.com       4211563955 HS       AAAA     f75f:18d8:7fff:886e:ffff:ffff:bbeb:846d
-msdn.mug.high.quality.purposes.somewhere 277291508 CH       AAAA     ffff:ffff:e9f5:27d4:26ef:6c57:37e8:d19e
-tata.yoyo.gouv           1921186043 CH       A        197.177.220.251
-
-;; ADDITIONAL SECTION:
-tata.yoyo.gouv           3817300438 IN       MX       7738 marcel.marquis.com
-bonjour.hello.mario      3284019278 CS       NS       bonjour.hello.mario

@@ -103,4 +103,5 @@ val to_key : t -> key
 val dnssec_compare : t -> t -> int
 val dnssec_compare_str : string list -> string list -> int
 
+(*Added by willy : returns a Crowbar Dns.Name.t gen*)
 val to_crowbar : t Crowbar.gen;;

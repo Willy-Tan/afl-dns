@@ -1,6 +1,6 @@
 (executables
  ((names (test))
-  (libraries (dns ounit pcap-format))
+  (libraries (dns oUnit pcap-format crowbar))
   (preprocess (pps (ppx_cstruct)))
 ))
 (alias

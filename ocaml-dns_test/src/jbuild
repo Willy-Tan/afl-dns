@@ -1,16 +1,21 @@
 (jbuild_version 1)
 
 (executable
-  ((name crowbar_test)                 ; The name of your entry file, minus the .ml
-   (public_name crowbar_test) ; Whatever you like, as far as I can tell
-   (modules (crowbar_test))
-   (libraries (crowbar cstruct dns afl-persistent astring ipaddr))
-   (preprocess (pps (ppx_deriving.std ppx_deriving_crowbar ppx_cstruct)))))         ; Express a dependency on the "lib" module
+  ((name crowbar_test)       
+   (public_name crowbar_test)
+   (modules (crowbar_test packet_gen))
+   (libraries (dns-lwt mirage-profile cmdliner ipaddr.unix lwt.unix hex crowbar cstruct dns afl-persistent astring ipaddr))
+   (preprocess (pps (ppx_deriving.std ppx_deriving_crowbar ppx_cstruct))))) 
 
 (executable
-  ((name persistent_test)                 ; The name of your entry file, minus the .ml
-   (public_name persistent_test) ; Whatever you like, as far as I can tell
+  ((name persistent_test)      
+   (public_name persistent_test)
    (modules (persistent_test))
    (libraries (crowbar cstruct dns afl-persistent astring ipaddr))
-   (preprocess (pps (ppx_deriving.std ppx_deriving_crowbar ppx_cstruct)))))         ; Express a dependency on the "lib" module
+   (preprocess (pps (ppx_deriving.std ppx_deriving_crowbar ppx_cstruct)))))
 
+(executable
+ ((name testcases)
+  (public_name testcases)
+  (modules (testcases))
+  (libraries (udns crowbar cstruct dns afl-persistent astring ipaddr))))

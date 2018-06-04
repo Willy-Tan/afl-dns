@@ -29,12 +29,12 @@
  
 (* Ignore everything on a line after a '#' or ';' *)
 let strip_comments =
-  let re = Re_str.regexp "[#;].*" in
-  fun x -> Re_str.global_replace re "" x
+  let re = Re.Str.regexp "[#;].*" in
+  fun x -> Re.Str.global_replace re "" x
 
 (* Remove any whitespace prefix and suffix from a line *)
-let ltrim = Re_str.(replace_first (regexp "^[\t ]+") "")
-let rtrim = Re_str.(replace_first (regexp "[\t ]+$") "")
+let ltrim = Re.Str.(replace_first (regexp "^[\t ]+") "")
+let rtrim = Re.Str.(replace_first (regexp "[\t ]+$") "")
 let trim x = ltrim (rtrim x)
 
 let map_line x =
@@ -87,10 +87,10 @@ module KeywordValue = struct
   | Sortlist of string list 
   | Options of OptionsValue.t list
   exception Unknown of string
-  let split = Re_str.split (Re_str.regexp "[\t ]+")
+  let split = Re.Str.split (Re.Str.regexp "[\t ]+")
    
   let ns_of_string ns =
-    let open Re_str in
+    let open Re.Str in
     match string_match (regexp "\\[\\(.+\\)\\]:\\([0-9]+\\)") ns 0 with
     |false -> Nameserver (Ipaddr.of_string_exn ns, None)
     |true ->
