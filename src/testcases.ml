@@ -194,7 +194,7 @@ let ttl_with_MSBset_test () =
 ;;
 
 (** Name syntax compliance : any characters allowed, RFC2181, Section 11. Names can have any ASCII characters in the DNS server, hostname or service checking should not be done at this layer.*)
-
+(*TODO*)
 
 (** Unknown RR type number compliance, RFC3597. It is assumed that the [Raw] type in Dns_packet can also represent unknown types (could be changed to an explicit [Unknown] type). *)
 let unknown_rrtype_test () =
@@ -248,7 +248,7 @@ let tests = [
 ]
 ;;
 
-
+(*IGNORE THIS : Small tests done by hand*)
 let txt_packet =
   let id = 42 
   and detail = Dns.Packet.{
