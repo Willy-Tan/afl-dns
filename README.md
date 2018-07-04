@@ -1,24 +1,16 @@
-# Fuzzing different dns implementations
+# Fuzzing different dns implementations in OCaml
 
-This is a small attempt at fuzzing different dns implementations (ocaml-dns and udns).
-For now, fuzzing is done on the packet parser to see what goes through and what doesn't.
+This is a small attempt at fuzzing different dns implementations (ocaml-dns and udns). The goal is to reveal potential bugs in each implementation, and check if their behaviour is conform or not with the actual standards.
 
-Because it takes a long time for the fuzzer to go from a valid query packet to a valid
-response packet, I have decided to launch two fuzzers. In the long term, both should have
- some similar test cases in ```./[DNS_implementation]_test/forAFL/*_output/queue```.
+There are two ways to fuzz both implementations : 
+ - a less guided fuzzing with AflPersistent, which starts with a valid DNS input and mutates this input by switching bits or bytes, by adding or erasing some fields (see http://lcamtuf.coredump.cx/afl/ for more details)
+ - a more guided fuzzing with Crowbar, which uses the initial input as a seed for guided Random Number Generators which can be specified in the code itself (see https://github.com/stedolan/crowbar for more details)
 
-I don't know yet if it is coherent to do so.
+Both techniques are used to test parsing functions and the server examples in each implementation.
 
+## How to use
 
-## Scripts
+To start fuzzing, you need to have afl-fuzz and tmux installed. Then, execute ```scripts/afl_persistent.sh``` to fuzz ocaml-dns and udns with afl-persistent, or execute ```scripts/afl_crowbar.sh``` to fuzz ocaml-dns and udns with Crowbar.
+/!\ There is an option to resume past fuzzing attempts if it was stopped, but you should minimize the former outputs for better performances. Most often, there are many redundant outputs, or outputs that have bits not influencing the execution path. To minimize the outputs, execute ```scripts/minimize.sh```.
 
-To start the fuzzers, execute 
-```./launch_afl.sh``` which launches two afl-fuzzers,
-one on query packet types, one on response packet types.
-
-Execute ```./pp_queue.sh``` to print in ```log/valid/valid_query.txt``` and ```log/valid/valid_response.txt```
-what the parser reads from the valid corpora made by afl-fuzz.
-
-Execute ```./pp_crashes.sh``` to print in ```log/crashes/crashes_query.txt``` and 
-```log/crashes/crashes_response.txt``` what the parser raises as an error from the crashes corpora
-made by afl-fuzz.
+You can save the logs using ```scripts/pp_all.sh```. It will print logs in the ```log``` folder.

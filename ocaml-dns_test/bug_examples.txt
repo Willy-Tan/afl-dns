@@ -1,18 +1,0 @@
-
-(*Marshalled then parsed packet*)
-
-    ;; global options: 
-;; ->>HEADER<<- opcode: RESERVED, status: SERVFAIL, id: 63992
-;; flags: ra tc qr; QUERY: 1, ANSWER: 1, AUTHORITY: 1, ADDITIONAL: 1
-
-;; QUESTION SECTION:
-;†YÈDÿ{™Ñ<bFg8ï                 ANY_CLS  RRSIG
-
-;; ANSWER SECTION:
-;r? ØŽšžÒíd*Ïpr€GÐ6½¬ÔL_žÐ˜”? 64595568 RR_ANY   AAAA     ffff:ffff:dadb:7f4e:ffff:ffff:d8df:cd70
-
-;; AUTHORITY SECTION:
-Æ]ú²“Y3ˆÛt¡             4012144386 CS       A        7.132.65.241
-
-;; ADDITIONAL SECTION:
-Žõ6©ÁA´ÄW•œ€C|¢?sµt‚gúª$z9®+ô:uà­þ 2558792113 RR_ANY   TXT      "\161\184\193\029\210\235F(m|\162X9\022\238\226\192d\209\003s\176Lj\165\250\027\198\248\"\138\170.\175\197\016er\219\158e\164z\164\006\147\210\205V\173\185\136O\225\224O\168\250\202\189\002\215\217\160"

@@ -1,0 +1,36 @@
+This file contains what the parser reads from the µDNS hangs corpora made by afl-fuzz.
+
+
+
+Reading file : forAFL/persistent_output/udns_output/udns01/hangs/*
+Content : 
+Fatal error: exception End_of_file
+Raised at file "pervasives.ml", line 440, characters 14-31
+Called from file "src/udns_persistent_test.ml", line 4, characters 10-22
+Called from file "src/udns_persistent_test.ml", line 17, characters 9-31
+
+
+Reading file : forAFL/persistent_output/udns_output/udns02/hangs/*
+Content : 
+Fatal error: exception End_of_file
+Raised at file "pervasives.ml", line 440, characters 14-31
+Called from file "src/udns_persistent_test.ml", line 4, characters 10-22
+Called from file "src/udns_persistent_test.ml", line 17, characters 9-31
+
+
+Reading file : forAFL/persistent_output/udns_output/udns03/hangs/*
+Content : 
+Fatal error: exception End_of_file
+Raised at file "pervasives.ml", line 440, characters 14-31
+Called from file "src/udns_persistent_test.ml", line 4, characters 10-22
+Called from file "src/udns_persistent_test.ml", line 17, characters 9-31
+
+
+Reading file : forAFL/persistent_output/udns_output/udns04/hangs/*
+Content : 
+Fatal error: exception End_of_file
+Raised at file "pervasives.ml", line 440, characters 14-31
+Called from file "src/udns_persistent_test.ml", line 4, characters 10-22
+Called from file "src/udns_persistent_test.ml", line 17, characters 9-31
+
+

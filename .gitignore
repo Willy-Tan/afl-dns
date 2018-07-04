@@ -9,12 +9,13 @@
 *.merlin
 *.cmxa
 
-query_output/*
-response_output/*
 crowbar_output/*
-result.txt
-errors.txt
-test.txt
+persistent_output/*
+queue_all/
+queue_cmin/
+queue_ptmin/
+debug.txt
+comparison.txt
 
 # ocamlbuild working directory
 _build/
@@ -23,8 +24,6 @@ _build/
 *.byte
 *.native
 *\#*
+
 *~
-# oasis generated files
-setup.data
-setup.log
 

@@ -1,0 +1,13 @@
+lib: [
+  "_build/install/default/lib/dns_test/META" {"META"}
+  "_build/install/default/lib/dns_test/opam" {"opam"}
+]
+bin: [
+  "_build/install/default/bin/crowbar_test" {"crowbar_test"}
+  "_build/install/default/bin/ocamldns_persistent_test" {"ocamldns_persistent_test"}
+  "_build/install/default/bin/udns_persistent_test" {"udns_persistent_test"}
+  "_build/install/default/bin/testcases" {"testcases"}
+]
+doc: [
+  "_build/install/default/doc/dns_test/README.md"
+]

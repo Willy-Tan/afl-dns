@@ -1,9 +1,0 @@
-lib: [
-  "_build/install/default/lib/dns_test/META" {"META"}
-  "_build/install/default/lib/dns_test/opam" {"opam"}
-]
-bin: [
-  "_build/install/default/bin/crowbar_test" {"crowbar_test"}
-  "_build/install/default/bin/persistent_test" {"persistent_test"}
-  "_build/install/default/bin/testcases" {"testcases"}
-]
