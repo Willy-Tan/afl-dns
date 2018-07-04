@@ -11,7 +11,7 @@ dev-repo: "https://github.com/Willy-Tan/afl-dns.git"
 build: [
   ["jbuilder" "build" "-p" name "-j" jobs]
 ]
-install: [make "install"]
+  
 remove: ["ocamlfind" "remove" "afl-dns"]
 depends: [
   "ocamlfind" {build}
