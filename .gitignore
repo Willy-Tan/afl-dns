@@ -10,8 +10,8 @@
 *.cmxa
 *.install
 
-crowbar_output/
-persistent_output/
+forAFL/crowbar_output/
+forAFL/persistent_output/
 queue_all/
 queue_cmin/
 queue_ptmin/
