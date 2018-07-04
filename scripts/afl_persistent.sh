@@ -36,7 +36,7 @@ fi
 
 #Check for existing data
 
-if [ -n "$(ls -A $ODNS_OUT)" ]; then
+if [ -n "$(ls -A $ODNS_OUT/odns01)" ]; then
     while [ $ASK_ODNS != "Y" ] && [ $ASK_ODNS != "n" ]; do
 	read -p "Some data already exists in the odns output folder, would you like to resume afl on it ? (Y/n) " ASK_ODNS
 	if [ $ASK_ODNS != "Y" ] && [ $ASK_ODNS != "n" ]; then
@@ -53,7 +53,7 @@ fi
 
 #Test if some udns output already exists
 
-if [ -n "$(ls -A $UDNS_OUT)" ]; then
+if [ -n "$(ls -A $UDNS_OUT/udns01)" ]; then
     while [ $ASK_UDNS != "Y" ] && [ $ASK_UDNS != "n" ]; do
 	read -p "Some data already exists in the udns output folder, would you like to resume afl on it ? (Y/n) " ASK_UDNS
 	if [ $ASK_UDNS != "Y" ] && [ $ASK_UDNS != "n" ]; then
