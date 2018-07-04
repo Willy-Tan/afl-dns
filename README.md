@@ -13,4 +13,4 @@ Both techniques are used to test parsing functions and the server examples in ea
 To start fuzzing, you need to have afl-fuzz and tmux installed. Then, execute ```scripts/afl_persistent.sh``` to fuzz ocaml-dns and udns with afl-persistent, or execute ```scripts/afl_crowbar.sh``` to fuzz ocaml-dns and udns with Crowbar.
 /!\ There is an option to resume past fuzzing attempts if it was stopped, but you should minimize the former outputs for better performances. Most often, there are many redundant outputs, or outputs that have bits not influencing the execution path. To minimize the outputs, execute ```scripts/minimize.sh```.
 
-You can save the logs using ```scripts/pp_all.sh```. It will print logs in the ```log``` folder.
+You can save the logs using ```scripts/log.sh```. It will print logs in the ```log``` folder.
