@@ -1,13 +1,12 @@
 
-opam-version: "2.0.0~rc2"
+opam-version: "2.0"
 name: "afl-dns"
 version: "~dev"
 maintainer: "Willy TAN <tan.willy02@gmail.com>"
 authors: "Willy TAN
 <tan.willy02@gmail.com>"
-homepage: "https://github.com/Willy-Tan/afl-dns/"
+homepage: "https://github.com/Willy-Tan/afl-dns"
 bug-reports: "https://github.com/Willy-Tan/afl-dns/issues"
-license: ""
 dev-repo: "https://github.com/Willy-Tan/afl-dns.git"
 build: [
   ["jbuilder" "build" "-p" name "-j" jobs]
