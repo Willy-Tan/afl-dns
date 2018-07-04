@@ -25,6 +25,7 @@
 - Cleanup the crash folder (on_hex raising errors) : DONE
 - Check for pointer errors
 - Check for NOTIFY/UPDATE packets
+- Test TSIG 
  
 - After having a nice set of testcases made from fuzzing the parser, fuzz :
 	- The resolver
