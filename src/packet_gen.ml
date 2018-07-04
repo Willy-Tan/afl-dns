@@ -62,12 +62,15 @@ let hex_times n = gen_times hex n;;
 
 
 (*---- Header generation ----*)
-
+(*
 let idcounter = ref 0;;
 let id = Crowbar.map [empty_gen] @@ (fun _ ->
     incr idcounter;
     let str = Printf.sprintf "%x" !idcounter in
     prepend_zero str 4);;
+*)
+
+let id = hex_const ~nb_bytes:2 42;;
 
 let flags_and_codes ?(qr=Crowbar.range 1) ?(opcode=Crowbar.range 15) ?(aa=Crowbar.range 1) ?(tc=Crowbar.range 1) ?(rd=Crowbar.range 1) ?(ra=Crowbar.range 1) ?(z=Crowbar.range 1) ?(ad=Crowbar.range 1) ?(cd=Crowbar.range 1) ?(rcode=Crowbar.range 15) () =
   Crowbar.map [qr;opcode;aa;tc;rd;ra;z;ad;cd;rcode] @@ (fun qr opcode aa tc rd ra z ad cd rcode -> 
