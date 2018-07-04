@@ -8,9 +8,15 @@ There are two ways to fuzz both implementations :
 
 Both techniques are used to test parsing functions and the server examples in each implementation.
 
+## Installation
+
+You need ```afl-fuzz```, ```afl-tmin```, ```afl-cmin``` installed to use all the features of AflPersistent and Crowbar. Compile with the command ```jbuilder build```.
+
 ## How to use
 
 To start fuzzing, you need to have afl-fuzz and tmux installed. Then, execute ```scripts/afl_persistent.sh``` to fuzz ocaml-dns and udns with afl-persistent, or execute ```scripts/afl_crowbar.sh``` to fuzz ocaml-dns and udns with Crowbar.
 /!\ There is an option to resume past fuzzing attempts if it was stopped, but you should minimize the former outputs for better performances. Most often, there are many redundant outputs, or outputs that have bits not influencing the execution path. To minimize the outputs, execute ```scripts/minimize.sh```.
 
-You can save the logs using ```scripts/log.sh```. It will print logs in the ```log``` folder.
+Save the logs with ```scripts/log.sh```. It will print logs in the ```log``` folder.
+
+Launch unit tests with ```_build/install/default/bin/testcases```. It will output test results in ```_build/_tests```.

@@ -9,4 +9,13 @@ install: [make "install"]
 remove: ["ocamlfind" "remove" "dns_test"]
 depends: [
   "ocamlfind" {build}
+  "cstruct"
+  "crowbar"
+  "afl-persistent"
+  "dns"
+  "udns"
+  "ppx_deriving_crowbar"
+  "alcotest"
+  "astring"
+  "ipaddr"
 ]
