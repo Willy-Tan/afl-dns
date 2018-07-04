@@ -8,6 +8,7 @@
 *.cmxs
 *.merlin
 *.cmxa
+*.install
 
 crowbar_output/*
 persistent_output/*
