@@ -24,11 +24,11 @@ if [ ! -d $OUT ]; then
     mkdir $UDNS_OUT
 fi
 
-if [! -d $ODNS_OUT ]; then
+if [ ! -d $ODNS_OUT ]; then
     mkdir $ODNS_OUT
 fi
 
-if [! -d $UDNS_OUT ]; then
+if [ ! -d $UDNS_OUT ]; then
     mkdir $UDNS_OUT
 fi
 
