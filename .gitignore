@@ -10,16 +10,16 @@
 *.cmxa
 *.install
 
-crowbar_output/*
-persistent_output/*
+crowbar_output/
+persistent_output/
 queue_all/
 queue_cmin/
 queue_ptmin/
 debug.txt
 comparison.txt
-log/valid/*
-log/crashes/*
-log/hangs/*
+log/valid/
+log/crashes/
+log/hangs/
 
 # ocamlbuild working directory
 _build/

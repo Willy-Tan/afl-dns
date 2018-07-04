@@ -5,6 +5,7 @@ set -eu
 #Define directory variables
 
 INP=forAFL/input
+OUT=forAFL/persistent_output
 ODNS_OUT=forAFL/persistent_output/odns_output
 UDNS_OUT=forAFL/persistent_output/udns_output
 
@@ -15,47 +16,65 @@ ASK_ODNS="foo"
 ASK_UDNS="bar"
 
 
-#Test if some ocaml-dns output already exists
+#Create folders if they don't exist
+
+if [ ! -d $OUT ]; then
+    mkdir $OUT
+    mkdir $ODNS_OUT
+    mkdir $UDNS_OUT
+fi
+
+if [! -d $ODNS_OUT]; then
+    mkdir $ODNS_OUT
+fi
+
+if [! -d $UDNS_OUT]; then
+    mkdir $UDNS_OUT
+fi
+
+
+
+#Check for existing data
 
 if [ -n "$(ls -A $ODNS_OUT)" ]; then
-	while [ $ASK_ODNS != "Y" ] && [ $ASK_ODNS != "n" ]; do
-		read -p "Some data already exists in the odns output folder, would you like to resume afl on it ? (Y/n) " ASK_ODNS
-		if [ $ASK_ODNS != "Y" ] && [ $ASK_ODNS != "n" ]; then
-			printf "You didn't write Y or n...\n"
-		fi
-	done
-
-	if [ $ASK_ODNS = "Y" ]; then
-		printf "Precedent ocaml-dns fuzzing will be resumed. \n\n"
-	else
-		printf "Old data will be erased. \n\n"
+    while [ $ASK_ODNS != "Y" ] && [ $ASK_ODNS != "n" ]; do
+	read -p "Some data already exists in the odns output folder, would you like to resume afl on it ? (Y/n) " ASK_ODNS
+	if [ $ASK_ODNS != "Y" ] && [ $ASK_ODNS != "n" ]; then
+	    printf "You didn't write Y or n...\n"
 	fi
+    done
+
+    if [ $ASK_ODNS = "Y" ]; then
+	printf "Precedent ocaml-dns fuzzing will be resumed. \n\n"
+    else
+	printf "Old data will be erased. \n\n"
+    fi
 fi
 
 #Test if some udns output already exists
 
 if [ -n "$(ls -A $UDNS_OUT)" ]; then
-	while [ $ASK_UDNS != "Y" ] && [ $ASK_UDNS != "n" ]; do
-		read -p "Some data already exists in the udns output folder, would you like to resume afl on it ? (Y/n) " ASK_UDNS
-		if [ $ASK_UDNS != "Y" ] && [ $ASK_UDNS != "n" ]; then
-			printf "You didn't write Y or n...\n"
-		fi
-	done
-
-	if [ $ASK_UDNS = "Y" ]; then
-		printf "Precedent udns fuzzing will be resumed. \n\n"
-	else
-		printf "Old data will be erased. \n\n"
+    while [ $ASK_UDNS != "Y" ] && [ $ASK_UDNS != "n" ]; do
+	read -p "Some data already exists in the udns output folder, would you like to resume afl on it ? (Y/n) " ASK_UDNS
+	if [ $ASK_UDNS != "Y" ] && [ $ASK_UDNS != "n" ]; then
+	    printf "You didn't write Y or n...\n"
 	fi
+    done
+
+    if [ $ASK_UDNS = "Y" ]; then
+	printf "Precedent udns fuzzing will be resumed. \n\n"
+    else
+	printf "Old data will be erased. \n\n"
+    fi
 fi
 
 
 #ocaml-dns flags
 
 if [ $ASK_ODNS == "foo" ] || [ $ASK_ODNS = "n" ]; then 
-	ODNS_INP_FLAG="-i $INP"
+    ODNS_INP_FLAG="-i $INP"
 else 
-	ODNS_INP_FLAG="-i-"
+    ODNS_INP_FLAG="-i-"
 fi	
 
 ODNS_MASTER_FLAGS="$ODNS_INP_FLAG -o $ODNS_OUT"
@@ -64,9 +83,9 @@ ODNS_SLAVE_FLAGS="-i $INP -o $ODNS_OUT"
 #udns flags
 
 if [ $ASK_UDNS == "bar" ] || [ $ASK_UDNS == "n" ]; then
-	UDNS_INP_FLAG="-i $INP"
+    UDNS_INP_FLAG="-i $INP"
 else
-	UDNS_INP_FLAG="-i-"
+    UDNS_INP_FLAG="-i-"
 fi 
 
 UDNS_MASTER_FLAGS="$UDNS_INP_FLAG -o $UDNS_OUT"

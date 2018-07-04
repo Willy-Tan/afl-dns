@@ -1,6 +1,6 @@
 #!/bin/bash
 
-
+##HAS TO BE REWRITTEN FROM THE BEGINNING
 
 #Define directory variables
 

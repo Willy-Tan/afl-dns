@@ -28,15 +28,15 @@ AFL_PTMIN="scripts/afl-ptmin.sh"
 #Create temporary directories to hold queue files
 
 if [ ! -d $QUEUE_ALL ]; then
-	mkdir $QUEUE_ALL
+    mkdir $QUEUE_ALL
 fi
 
 if [ ! -d $QUEUE_CMIN ]; then
-	mkdir $QUEUE_CMIN
+    mkdir $QUEUE_CMIN
 fi
 
 if [ ! -d $QUEUE_PTMIN ]; then
-	mkdir $QUEUE_PTMIN
+    mkdir $QUEUE_PTMIN
 fi
 
 
@@ -45,72 +45,58 @@ fi
 
 #Start with ocaml-dns
 
-
-#Copy queue files from fuzzers
-
 for FUZZER in $ODNS_PATH/*; do
-	if [ -d $FUZZER ]; then
-		cp ${FUZZER}/queue/* $QUEUE_ALL
-	fi
+    if [ -d $FUZZER ]; then
+	#Copy queue files from fuzzers
+	cp -v $FUZZER/queue/* $QUEUE_ALL
+	
+	#Minimize with afl-cmin first
+	$AFL_CMIN -i $QUEUE_ALL -o $QUEUE_CMIN -- $ODNS_EXE
+	
+	#Then minimize with a parallelized afl-tmin
+	$AFL_PTMIN 8 $QUEUE_CMIN $QUEUE_PTMIN $ODNS_EXE
+
+	#Copy back the files to the corresponding fuzzers after having removed them
+	rm $FUZZER/queue/*
+	cp -v $QUEUE_PTMIN/* $FUZZER/queue
+	
+	#Cleanup folders
+	rm $QUEUE_ALL/*
+	rm $QUEUE_CMIN/*
+	rm $QUEUE_PTMIN/*
+	
+    fi
 done
-
-#Minimize with afl-cmin first
-
-$AFL_CMIN -i $QUEUE_ALL -o $QUEUE_CMIN -- $ODNS_EXE
-
-#Then minimize with a parallelized afl-tmin
-
-$AFL_PTMIN 8 $QUEUE_CMIN $QUEUE_PTMIN $ODNS_EXE
-
-#Copy back the files to the corresponding fuzzers after having removed them
-
-for FUZZER in $ODNS_PATH/*; do
-	if [ -d $FUZZER ]; then
-		rm -rf ${FUZZER}/queue/*
-		cp ${QUEUE_PTMIN}/* ${FUZZER}/queue
-	fi
-done
-
-#Cleanup temporary folders
-
-rm -rf $QUEUE_ALL/*
-rm -rf $QUEUE_CMIN/*
-rm -rf $QUEUE_PTMIN/*
-
 
 #-----------------------------------------------------------------------------------------
 
+
 #Now for udns
 
-#Copy queue files from fuzzers
-
 for FUZZER in $UDNS_PATH/*; do
-	if [ -d $FUZZER ]; then
-		cp ${FUZZER}/queue/* $QUEUE_ALL
-	fi
+    if [ -d $FUZZER ]; then
+	#Copy queue files from fuzzers
+	cp -v $FUZZER/queue/* $QUEUE_ALL
+	
+	#Minimize with afl-cmin first
+	$AFL_CMIN -i $QUEUE_ALL -o $QUEUE_CMIN -- $UDNS_EXE
+	
+	#Then minimize with a parallelized afl-tmin
+	$AFL_PTMIN 8 $QUEUE_CMIN $QUEUE_PTMIN $UDNS_EXE
+
+	#Copy back the files to the corresponding fuzzers after having removed them
+	rm $FUZZER/queue/*
+	cp -v $QUEUE_PTMIN/* $FUZZER/queue
+	
+	#Cleanup folders
+	rm $QUEUE_ALL/*
+	rm $QUEUE_CMIN/*
+	rm $QUEUE_PTMIN/*
+    fi
 done
 
-#Minimize with afl-cmin first
 
-$AFL_CMIN -i $QUEUE_ALL -o $QUEUE_CMIN -- $UDNS_EXE
-
-#Then minimize with a parallelized afl-tmin
-
-$AFL_PTMIN 8 $QUEUE_CMIN $QUEUE_PTMIN $UDNS_EXE
-
-#Copy back the files to the corresponding fuzzers after having removed them
-
-for FUZZER in $UDNS_PATH/*; do
-	if [ -d $FUZZER ]; then
-		rm -rf ${FUZZER}/queue/*
-		cp ${QUEUE_PTMIN}/* ${FUZZER}/queue
-	fi
-done
-
-#------------------------------------------------------------------------------------------
-
-
-#Erase temporary folders
+#Erase folders
 
 rm -rf $QUEUE_ALL
 rm -rf $QUEUE_CMIN
