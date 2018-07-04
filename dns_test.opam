@@ -18,4 +18,5 @@ depends: [
   "alcotest"
   "astring"
   "ipaddr"
+  "lwt"
 ]
