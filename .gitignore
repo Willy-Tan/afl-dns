@@ -16,7 +16,9 @@ queue_cmin/
 queue_ptmin/
 debug.txt
 comparison.txt
-log/
+log/valid/*
+log/crashes/*
+log/hangs/*
 
 # ocamlbuild working directory
 _build/
