@@ -8,6 +8,7 @@
 - Use UDP to send packets through OCaml : DONE
 - Write a proper script for afl minimization : DONE
 - Solve dependency errors in the code : DONE
+- Make a proper crowbar script 
 - Make proper unit tests
 - Complete rfc_compliance
 
