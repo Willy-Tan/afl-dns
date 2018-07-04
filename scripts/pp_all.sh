@@ -52,6 +52,13 @@ BUFFER=tmp.txt
 
 #-----------------------------------------------------------------------
 
+if [ ! -d log ]; then
+    mkdir log
+    mkdir log/valid
+    mkdir log/crashes
+    mkdir log/hangs
+fi
+
 
 #------------------------- PERSISTENT FILES ----------------------------
 
