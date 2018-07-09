@@ -46,7 +46,7 @@ let header ?(id=42) ?(qr=0) ?(opcode=0) ?(aa=0) ?(tc=0) ?(rd=0) ?(ra=0) ?(z=0) ?
 let default_name_as_hex = "03666f6f026d7906646f6d61696e00";;
 
 
-(** [query ~qname ~qtype ~qclass ()] eturns a query section with the corresponding qname, qtype and qclass. Qname will be represented as a valid hex because I didn't make a string parsing function out of laziness*)
+(** [query ~qname ~qtype ~qclass ()] returns a query section with the corresponding qname, qtype and qclass. Qname will be represented as a valid hex because I didn't make a string parsing function out of laziness*)
 let query ?(qname=default_name_as_hex) ?(qtype=1) ?(qclass=1) () =
   let hex_qtype = int_to_hex qtype
   and hex_qclass = int_to_hex qclass
@@ -123,14 +123,15 @@ let default_rdata =
   Dns_packet.A default_ip;;
 
 
-(** val manual_rr : string -> int -> Dns_packet.rdata -> Dns_packet.rr
-    [manual_rr name ttl rdata] returns a Dns_packet.rr with the corresponding name, ttl and rdata. 
+(** val make_rr : string -> int -> Dns_packet.rdata -> Dns_packet.rr
+    [make_rr name ttl rdata] returns a Dns_packet.rr with the corresponding name, ttl and rdata. 
     The purpose of this function is to clarify the code.*)
-let manual_rr ?(name=default_name) ?(ttl=300) ?(rdata=default_rdata) () = Dns_packet.{
+let make_rr ?(name=default_name) ?(ttl=300) ?(rdata=default_rdata) () = Dns_packet.{
     name = Domain_name.of_string_exn name;
     ttl = Int32.of_int ttl;
     rdata = rdata;
   };;
+
 
 (** val packet_equal : Dns_packet.t -> Dns_packet.t -> bool
     [packet_equal a b] tests if a and b are equal bitwise.*)
@@ -142,13 +143,17 @@ let packet_equal a b =
   and (b_cstr,_) = Dns_packet.encode `Udp b_header b_v
   in Cstruct.equal a_cstr b_cstr;;
 
+
 (** val p_packet : Dns_packet.t testable
     [p_packet] is a packet [testable] for Alcotest unit tests on packets*)
 let p_packet = Alcotest.testable Dns_packet.pp packet_equal;;
 
+
 (** val p_rr : Dns_packet.rr testable
     [p_rr] is a RR testable for Alcotest unit tests on resource records*) 
 let p_rr = Alcotest.testable Dns_packet.pp_rr Dns_packet.rr_equal;;
+
+
 
 
 exception DisallowedRRtype;;
@@ -174,7 +179,7 @@ let decode_query_exn cstr = match Dns_packet.decode cstr with
 (** TTL rule compliance, RFC2181, Section 8. TTL is on a 32 bits field, but it should only use the 31 less significant bits with the MSB set to 0 : if the MSB is set to 1, then TTL should be considered as 0. However, as 0 TTLs should be handled carefully, raising an error may also be alright. 
 This tests TTLs with the MSB set to 1 : passing this test means TTL with MSB set to 1 is either zero or raises an error.*)
 let ttl_with_MSBset_test () =
-  let expected_result = manual_rr ~ttl:0 () in
+  let expected_result = make_rr ~ttl:0 () in
 
   let parsed_packet = 
     (*Packet crafting*)
@@ -194,13 +199,30 @@ let ttl_with_MSBset_test () =
 ;;
 
 (** Name syntax compliance : any characters allowed, RFC2181, Section 11. Names can have any ASCII characters in the DNS server, hostname or service checking should not be done at this layer.*)
-(*TODO*)
+let syntax_test () =
+  let expected_result = "\255(((é_ç" in
+
+  let parsed_name =
+    let non_ldh_name = "0a5c323535282828e95fe7" in
+    let qry = query ~qname:non_ldh_name () in
+    let pckt = packet ~query:qry () in
+    try
+      let content = decode_query_exn pckt in
+      match content.question with
+      |[q] -> Domain_name.to_string q.q_name
+      | _ -> raise (Failure "Packet parsed incorrectly")
+    with
+    | e -> raise e 
+  in
+  Alcotest.check Alcotest.string "Non-LDH domain names are allowed" expected_result parsed_name 
+;;
+   
 
 (** Unknown RR type number compliance, RFC3597. It is assumed that the [Raw] type in Dns_packet can also represent unknown types (could be changed to an explicit [Unknown] type). *)
 let unknown_rrtype_test () =
   let expected_result =
     let expected_rdata = Dns_packet.Raw (int_to_rr_typ_exn 32771, Cstruct.create 16) in
-    manual_rr ~rdata:expected_rdata ()
+    make_rr ~rdata:expected_rdata ()
       
   and parsed_packet =
     (*Packet crafting*)
@@ -239,6 +261,7 @@ let unknown_rrclass_test () =
 
 let udns_tests = [
   "TTL with MSB set test", `Quick, ttl_with_MSBset_test ;
+  "Non-LDH allowance test", `Quick, syntax_test ;
   "unknown rrtype test",`Quick,unknown_rrtype_test ;
   "unknown rrclass test", `Quick, unknown_rrclass_test ;
 ];;
@@ -248,42 +271,8 @@ let tests = [
 ]
 ;;
 
-(*IGNORE THIS : Small tests done by hand*)
-let txt_packet =
-  let id = 42 
-  and detail = Dns.Packet.{
-      qr = Query;
-      opcode = Dns.Packet.Standard;
-      aa = true;
-      tc = false;
-      rd = true;
-      ra = true;
-      rcode = NoError
-    }
-  and question = Dns.Packet.{
-      q_name = Dns.Name.of_string "www.test.com";
-      q_type = Q_A ;
-      q_class = Q_IN;
-      q_unicast = Q_Normal;
-    }
-  and rr = Dns.Packet.{
-    name = Dns.Name.of_string "www.test.com" ;
-    cls = RR_IN;
-    flush = true;
-    ttl = Int32.of_int 600;
-    rdata = TXT ["bonjour";"ça";"va ?"]
-  }
-  in Dns.Packet.{
-      id = id;
-      detail = detail;
-      questions = [question];
-      answers = [rr];
-      authorities = [];
-      additionals = [];
-    };;
-      
 
-    
                                                    
 let () =
-  Alcotest.run "µDNS RFC compliance" tests;;
+  Alcotest.run "µDNS RFC compliance" tests
+;;

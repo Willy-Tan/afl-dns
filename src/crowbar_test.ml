@@ -10,6 +10,9 @@ let pp_packet ppf parsed = Crowbar.pp ppf "%s" (Dns.Dig.string_of_answers parsed
 let gen_print printfn gen = Crowbar.add_test ~name:"Generator printer" [gen] @@ fun a ->
   Printf.printf "Gen : %s\n%!" (printfn a);;
 
+let gen_pp pp gen = Crowbar.add_test ~name:"Generator pretty printer" [gen] @@ fun a ->
+  Format.printf "Gen : %a\n\n%!" pp a;;
+
 let log_warn s = Printf.eprintf "WARN: %s\n%!" s
 
 (*--------------------------------------------------------------------*)
@@ -64,12 +67,12 @@ let send_packet cstr ofd =
    >>= fun _ -> Lwt.return_unit);;
 
 
-let crowbar_send_only ?(query=valid_query) () = 
-  Crowbar.add_test ~name:"Packet send" [query] @@ (fun query ->
-      let cstr = Cstruct.of_hex query in
+let crowbar_send_only ?(packet=query_packet) () = 
+  Crowbar.add_test ~name:"Packet send" [packet] @@ (fun packet ->
+      let cstr = Cstruct.of_hex packet in
       Lwt_main.run (currentfd () >>= fun ofd -> send_packet cstr ofd));;
 
-let parse_opt id buf =
+let odns_parse id buf =
   let recv_id = Bytes.create 2 in
   Cstruct.blit_to_bytes buf 0 recv_id 0 2;
   (*if (Bytes.equal id recv_id) then
@@ -77,29 +80,60 @@ let parse_opt id buf =
     else*)
     Some (Dns.Packet.parse buf);;
 
-let rec receive ?(parse=parse_opt) id ofd =
+let udns_parse id buf =
+  let recv_id = Bytes.create 2 in
+  Cstruct.blit_to_bytes buf 0 recv_id 0 2;
+  (*if (Bytes.equal id recv_id) then
+    None
+    else*)
+  match Dns_packet.decode buf with
+  |Error e -> Fmt.failwith "%a" Dns_packet.pp_err e
+  |Ok (pkt,_) -> Some pkt
+;;
+
+
+let rec receive parse id ofd =
   let buf = Cstruct.create 4096 in
   Cstruct.(Lwt_bytes.recvfrom ofd buf.buffer buf.off buf.len [])
   >>= fun (len, _) ->
   let buf = Cstruct.sub buf 0 len in
   match parse id buf with
-  | None -> receive id ofd
+  | None -> receive parse id ofd
   | Some r -> closefd ofd >>= fun _ -> Lwt.return r;;
 
 
-let crowbar_send_and_receive ?(query=valid_query) () =
-  Crowbar.add_test ~name:"Packet send and receive" [query] @@ (fun query ->
-      (*Sending packet*)
-      let cstr = Cstruct.of_hex query in
+let odns_send_and_receive ?(packet=query_packet) () =
+  Crowbar.add_test ~name:"odns send and receive" [packet] @@ (fun packet ->
+      (*Create packet and get ID*)
+      let cstr = Cstruct.of_hex packet in
       let id = Bytes.create 2 in
       Cstruct.blit_to_bytes cstr 0 id 0 2;
       let recv_pkt = 
         Lwt_main.run (currentfd () >>= (fun ofd -> send_packet cstr ofd >>=
-                        fun _ -> receive id ofd)) in
+                                         fun _ -> receive odns_parse id ofd)) in
       Printf.printf "============================================================\n\n%!";
-      Printf.printf "Query :\n\n%s\n\n%!"@@ Dns.Dig.string_of_answers (Dns.Packet.parse cstr);
+      Printf.printf "Packet :\n\n%s\n\n%!"@@ Dns.Dig.string_of_answers (Dns.Packet.parse cstr);
       Printf.printf "Answer:\n\n%s\n\n%!" @@ Dns.Dig.string_of_answers recv_pkt;
-      Crowbar.check true);;
+      Crowbar.check true)
+
+let udns_send_and_receive ?(packet=query_packet) () =
+  Crowbar.add_test ~name:"udns send and receive" [packet] @@ (fun packet ->
+      (*Create packet and get ID*)
+      let cstr = Cstruct.of_hex packet in
+      (*let id = Bytes.create 4 in
+      Cstruct.blit_to_bytes cstr 0 id 0 4;
+      Printf.printf "cstr length = %d\n" cstr.Cstruct.len;
+        Printf.printf "id = %s\n\n%!" @@ Bytes.to_string id;*)
+      let send_pkt = match Dns_packet.decode cstr with
+      |Ok (p,_) -> p
+      |Error e -> Format.printf "%a\n\n%!" Dns_packet.pp_err e;Crowbar.bad_test () in
+      (*Printf.printf "============================================================\n\n%!";
+        Format.printf "Packet :\n\n%a\n\n%!" Dns_packet.pp send_pkt;*)
+      let recv_pkt =
+        Lwt_main.run (currentfd () >>= (fun ofd -> send_packet cstr ofd >>=
+                                         fun _ -> receive udns_parse id ofd)) in
+      (*Format.printf "Answer:\n\n%a\n\n%!" Dns_packet.pp recv_pkt)*) ());;
+
 
 let () =
-   odns_packet_test response_packet;;
+  udns_send_and_receive ~packet:response_packet ();;

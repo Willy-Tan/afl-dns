@@ -62,15 +62,14 @@ let hex_times n = gen_times hex n;;
 
 
 (*---- Header generation ----*)
-(*
+
 let idcounter = ref 0;;
 let id = Crowbar.map [empty_gen] @@ (fun _ ->
     incr idcounter;
     let str = Printf.sprintf "%x" !idcounter in
     prepend_zero str 4);;
-*)
 
-let id = hex_const ~nb_bytes:2 42;;
+
 
 let flags_and_codes ?(qr=Crowbar.range 1) ?(opcode=Crowbar.range 15) ?(aa=Crowbar.range 1) ?(tc=Crowbar.range 1) ?(rd=Crowbar.range 1) ?(ra=Crowbar.range 1) ?(z=Crowbar.range 1) ?(ad=Crowbar.range 1) ?(cd=Crowbar.range 1) ?(rcode=Crowbar.range 15) () =
   Crowbar.map [qr;opcode;aa;tc;rd;ra;z;ad;cd;rcode] @@ (fun qr opcode aa tc rd ra z ad cd rcode -> 
@@ -217,17 +216,17 @@ let make_packet ?(header=make_header ()) ?(query=make_query ()) ?(answer=resourc
   hex_concat_list [header;query;answer;authority;additional];;
 
 let query_packet =
-  Crowbar.dynamic_bind (Crowbar.range 500) (fun n ->
-      let f_and_c = flags_and_codes ~opcode:(Crowbar.const 0) ~rcode:(Crowbar.range 10) () in
+  Crowbar.dynamic_bind (Crowbar.range 600) (fun n ->
+      let f_and_c = flags_and_codes ~opcode:(Crowbar.const 0) ~rcode:(Crowbar.const 0) ~aa:(Crowbar.const 0) ~tc:(Crowbar.const 0) ~rd:(Crowbar.const 0) ~ra:(Crowbar.const 0) ~z:(Crowbar.const 0) ~ad:(Crowbar.const 0) ~cd:(Crowbar.const 0) () in
       let hdr = make_header ~qdcount:(const_qdcount n) ~ancount:(const_ancount 0) ~aacount:(const_aacount 0) ~arcount:(const_arcount 0) ~flags_and_codes:f_and_c () in
-      let qry = gen_times (make_query ~name:const_name ()) n in
+      let qry = gen_times (make_query ~name:const_name ~qtype:(hex_const ~nb_bytes:2 1) ()) n in
       make_packet ~header:hdr ~query:qry ~answer:empty_gen ~authority:empty_gen ~additional:empty_gen ());;
 
 
 let response_packet =
-  let tuple_gen = Crowbar.map [Crowbar.range 500; Crowbar.range 500; Crowbar.range 500; Crowbar.range 500] (fun a b c d -> a,b,c,d) in
+  let tuple_gen = Crowbar.map [Crowbar.range ~min:1 50; Crowbar.range 50; Crowbar.range 50; Crowbar.range 50] (fun a b c d -> a,b,c,d) in
   Crowbar.dynamic_bind tuple_gen (fun (n1,n2,n3,n4) ->
-      let f_and_c = flags_and_codes ~opcode:(Crowbar.const 0) ~rcode:(Crowbar.range 10) () in
+      let f_and_c = flags_and_codes () in
       let hdr = make_header ~qdcount:(const_qdcount n1) ~ancount:(const_ancount n2) ~aacount:(const_aacount n3) ~arcount:(const_arcount n4) ~flags_and_codes:f_and_c () in
       let qry = gen_times (make_query ~name:const_name ()) n1
       and ans = gen_times (resource_record ~name:const_name ()) n2

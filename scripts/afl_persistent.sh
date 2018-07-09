@@ -22,16 +22,27 @@ if [ ! -d $OUT ]; then
     mkdir $OUT
     mkdir $ODNS_OUT
     mkdir $UDNS_OUT
+    mkdir $ODNS_OUT/odns01
+    mkdir $UDNS_OUT/udns01
 fi
 
 if [ ! -d $ODNS_OUT ]; then
     mkdir $ODNS_OUT
+    mkdir $ODNS_OUT/odns01
 fi
 
 if [ ! -d $UDNS_OUT ]; then
     mkdir $UDNS_OUT
+    mkdir $UDNS_OUT/udns01
 fi
 
+if [! -d $ODNS_OUT/odns01 ]; then
+    mkdir $ODNS_OUT/odns01
+fi
+
+if [! -d $UDNS_OUT/udns01 ]; then
+    mkdir $UDNS_OUT/udns01
+fi
 
 
 #Check for existing data
