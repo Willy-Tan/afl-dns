@@ -8,7 +8,8 @@
 - Use UDP to send packets through OCaml : DONE
 - Write a proper script for afl minimization : DONE
 - Solve dependency errors in the code : DONE
-- Make a proper crowbar script 
+- Make a proper crowbar script : DONE
+- Separate Crowbar executable in multiple ones, especially for printing, for ocaml-dns and for udns
 - Make proper unit tests
 - Complete rfc_compliance
 

@@ -34,17 +34,10 @@ PERS_CRASHES_UDNS_LOG=log/crashes/persistent_crashes_udns.txt
 
 #Crowbar variables
 
-CROW_ODNS_OUTPUT=forAFL/crowbar_output/odns_output
-CROW_UDNS_OUTPUT=forAFL/crowbar_output/udns_output
-
-CROW_VALID_ODNS_LOG=log/valid/crowbar_valid_odns.txt
-CROW_VALID_UDNS_LOG=log/valid/crowbar_valid_udns.txt
-
-CROW_HANGS_ODNS_LOG=log/hangs/crowbar_hangs_odns.txt
-CROW_HANGS_UDNS_LOG=log/hangs/crowbar_hangs_udns.txt
-
-CROW_CRASHES_ODNS_LOG=log/crashes/crowbar_crashes_odns.txt
-CROW_CRASHES_UDNS_LOG=log/crashes/crowbar_crashes_udns.txt
+CROW_OUTPUT=forAFL/crowbar_output/*
+CROW_VALID_LOG=log/valid/crowbar_valid_odns.txt
+CROW_HANGS_LOG=log/hangs/crowbar_hangs_odns.txt
+CROW_CRASHES_LOG=log/crashes/crowbar_crashes_udns.txt
 
 BUFFER=tmp.txt
 
@@ -165,7 +158,7 @@ echo ""
 #----------------------------- HANGS ----------------------------------
 
 echo -e "This file contains what the parser reads from the µDNS hangs corpora made by afl-fuzz.\n\n\n" > $PERS_HANGS_UDNS_LOG
-echo -e "Printing hangs input log for ocaml-dns..."
+echo -e "Printing hangs input log for µDNS..."
 for d in $PERS_UDNS_OUTPUT; do
 	echo -e "Going into $d..."
 	HANGS="${d}/hangs"
@@ -211,4 +204,81 @@ for d in $PERS_UDNS_OUTPUT; do
 done
 
 
+: '
+WRITE OTHER EXECUTABLES TO SPECIFICALLY PRINT FOR CROWBAR !!
+#----------------------------- CROWBAR ---------------------------------
+
+#------------------------------ VALID ----------------------------------
+
+echo -e "This file contains what the parser reads from the crowbar corpora made by afl-fuzz.\n\n\n" > $CROW_VALID_LOG
+echo -e "Printing valid input log for crowbar..."
+for d in $CROW_OUTPUT; do
+	echo -e "Going into $d..."
+	QUEUE="${d}/queue"
+	TOTAL="$(ls -1q "$QUEUE" | wc -l)"
+	COUNTER=0
+	for f in $QUEUE/*; do
+		((COUNTER++))
+		echo -ne "Processing valid files... (${COUNTER}/${TOTAL})\r"
+		cat $f | $CROW_TEST &> $BUFFER
+		if [ -s $BUFFER ];then
+			echo -e "Reading file :" $f >> $CROW_VALID_LOG
+			echo -e "Content : $(cat $f)" >> $CROW_VALID_LOG
+			cat $BUFFER >> $CROW_VALID_LOG
+			echo -e "\n" >> $CROW_VALID_LOG
+		fi	
+	done
+	echo ""
+done
+echo ""
+
+
+#----------------------------- HANGS ----------------------------------
+
+echo -e "This file contains what the parser reads from the ocaml-dns hangs corpora made by afl-fuzz.\n\n\n" > $CROW_HANGS_LOG
+echo -e "Printing hangs input log for ocaml-dns..."
+for d in $CROW_OUTPUT; do
+	echo -e "Going into $d..."
+	HANGS="${d}/hangs"
+	TOTAL="$(ls -1q "$HANGS" | wc -l)"
+	COUNTER=0
+	for f in $HANGS/*; do
+		((COUNTER++))
+		echo -ne "Processing hanging files... (${COUNTER}/${TOTAL})\r"
+		cat $f | $CROW_TEST &> $BUFFER
+		if [ -s $BUFFER ];then
+			echo -e "Reading file :" $f >> $CROW_HANGS_LOG
+			echo -e "Content : $(cat $f)" >> $CROW_HANGS_LOG
+			cat $BUFFER >> $CROW_HANGS_LOG
+			echo -e "\n" >> $CROW_HANGS_LOG
+		fi	
+	done
+	echo ""
+done
+echo ""
+
+#---------------------------- CRASHES ----------------------------------
+
+echo -e "This file contains what the parser reads from the ocaml-dns crashes corpora made by afl-fuzz.\n\n\n" > $CROW_CRASHES_LOG
+echo -e "Printing crashes input log for ocaml-dns..."
+for d in $CROW_OUTPUT; do
+	echo -e "Going into $d..."
+	CRASHES="${d}/crashes"
+	TOTAL="$(ls -1q "$CRASHES" | wc -l)"
+	COUNTER=0
+	for f in $CRASHES/*; do
+		((COUNTER++))
+		echo -ne "Processing crash files... (${COUNTER}/${TOTAL})\r"
+		cat $f | $CROW_TEST &> $BUFFER
+		if [ -s $BUFFER ];then
+			echo -e "Reading file :" $f >> $CROW_CRASHES_LOG
+			echo -e "Content : $(cat $f)" >> $CROW_CRASHES_LOG
+			cat $BUFFER >> $CROW_CRASHES_LOG
+			echo -e "\n" >> $CROW_CRASHES_LOG
+		fi	
+	done
+	echo ""
+done
+echo ""
+'
 rm -f $BUFFER
