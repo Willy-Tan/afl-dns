@@ -2,7 +2,7 @@
 
 let empty_gen = Crowbar.const "";;
 
-let rec truncate list length =
+let truncate list length =
   let rec aux acc n list = match (n,list) with
     |(k,_) when (k >= length) -> acc
     |(_,[]) -> acc
@@ -152,7 +152,6 @@ let pointer_name = Crowbar.map [Crowbar.list1 pointer_label] @@ fun l ->
 
 
 (*FOO.MY.DOMAIN*)
-let const_name = Crowbar.const "03464f4f024d5906444f4d41494e00";;
 
 let const_name = Crowbar.const "03666f6f026d7906646f6d61696e00";;
 
@@ -224,10 +223,18 @@ let query_packet =
 
 
 let response_packet =
+  let opcode = Crowbar.choose [
+      Crowbar.const 0;
+      Crowbar.const 4;
+      Crowbar.const 5;
+    ]
+    and rcode = Crowbar.range 10
+  and id = Crowbar.const "0001"
+  in
   let tuple_gen = Crowbar.map [Crowbar.range ~min:1 50; Crowbar.range 50; Crowbar.range 50; Crowbar.range 50] (fun a b c d -> a,b,c,d) in
   Crowbar.dynamic_bind tuple_gen (fun (n1,n2,n3,n4) ->
-      let f_and_c = flags_and_codes () in
-      let hdr = make_header ~qdcount:(const_qdcount n1) ~ancount:(const_ancount n2) ~aacount:(const_aacount n3) ~arcount:(const_arcount n4) ~flags_and_codes:f_and_c () in
+      let f_and_c = flags_and_codes ~opcode:opcode ~rcode:rcode () in
+      let hdr = make_header ~id:id ~qdcount:(const_qdcount n1) ~ancount:(const_ancount n2) ~aacount:(const_aacount n3) ~arcount:(const_arcount n4) ~flags_and_codes:f_and_c () in
       let qry = gen_times (make_query ~name:const_name ()) n1
       and ans = gen_times (resource_record ~name:const_name ()) n2
       and aut = gen_times (resource_record ~name:const_name ()) n3

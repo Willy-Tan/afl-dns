@@ -67,12 +67,12 @@ let send_packet cstr ofd =
    >>= fun _ -> Lwt.return_unit);;
 
 
-let crowbar_send_only ?(packet=query_packet) () = 
+let send_only ?(packet=query_packet) () = 
   Crowbar.add_test ~name:"Packet send" [packet] @@ (fun packet ->
       let cstr = Cstruct.of_hex packet in
       Lwt_main.run (currentfd () >>= fun ofd -> send_packet cstr ofd));;
 
-let odns_parse id buf =
+let odns_parse buf =
   let recv_id = Bytes.create 2 in
   Cstruct.blit_to_bytes buf 0 recv_id 0 2;
   (*if (Bytes.equal id recv_id) then
@@ -80,7 +80,7 @@ let odns_parse id buf =
     else*)
     Some (Dns.Packet.parse buf);;
 
-let udns_parse id buf =
+let udns_parse buf =
   let recv_id = Bytes.create 2 in
   Cstruct.blit_to_bytes buf 0 recv_id 0 2;
   (*if (Bytes.equal id recv_id) then
@@ -92,13 +92,13 @@ let udns_parse id buf =
 ;;
 
 
-let rec receive parse id ofd =
+let rec receive parse ofd =
   let buf = Cstruct.create 4096 in
   Cstruct.(Lwt_bytes.recvfrom ofd buf.buffer buf.off buf.len [])
   >>= fun (len, _) ->
   let buf = Cstruct.sub buf 0 len in
-  match parse id buf with
-  | None -> receive parse id ofd
+  match parse buf with
+  | None -> receive parse ofd
   | Some r -> closefd ofd >>= fun _ -> Lwt.return r;;
 
 
@@ -110,7 +110,7 @@ let odns_send_and_receive ?(packet=query_packet) () =
       Cstruct.blit_to_bytes cstr 0 id 0 2;
       let recv_pkt = 
         Lwt_main.run (currentfd () >>= (fun ofd -> send_packet cstr ofd >>=
-                                         fun _ -> receive odns_parse id ofd)) in
+                                         fun _ -> receive odns_parse ofd)) in
       Printf.printf "============================================================\n\n%!";
       Printf.printf "Packet :\n\n%s\n\n%!"@@ Dns.Dig.string_of_answers (Dns.Packet.parse cstr);
       Printf.printf "Answer:\n\n%s\n\n%!" @@ Dns.Dig.string_of_answers recv_pkt;
@@ -127,12 +127,12 @@ let udns_send_and_receive ?(packet=query_packet) () =
       let send_pkt = match Dns_packet.decode cstr with
       |Ok (p,_) -> p
       |Error e -> Format.printf "%a\n\n%!" Dns_packet.pp_err e;Crowbar.bad_test () in
-      (*Printf.printf "============================================================\n\n%!";
-        Format.printf "Packet :\n\n%a\n\n%!" Dns_packet.pp send_pkt;*)
+      Printf.printf "============================================================\n\n%!";
+        Format.printf "Packet :\n\n%a\n\n%!" Dns_packet.pp send_pkt;
       let recv_pkt =
         Lwt_main.run (currentfd () >>= (fun ofd -> send_packet cstr ofd >>=
-                                         fun _ -> receive udns_parse id ofd)) in
-      (*Format.printf "Answer:\n\n%a\n\n%!" Dns_packet.pp recv_pkt)*) ());;
+                                         fun _ -> receive udns_parse ofd)) in
+      Format.printf "Answer:\n\n%a\n\n%!" Dns_packet.pp recv_pkt);;
 
 
 let () =

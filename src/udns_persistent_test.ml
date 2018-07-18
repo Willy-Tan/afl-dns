@@ -3,9 +3,9 @@
 let main () =
   let s = read_line () in
   let testcase =
-    try Some (Cstruct.of_hex s)
+    try Some (Cstruct.of_string s)
     with
-    | _ -> None (*Bad kind of test*)
+    | e -> Printf.printf "%s\n" (Printexc.to_string e); None (*Bad kind of test*)
   in
   match testcase with
   | None -> ()

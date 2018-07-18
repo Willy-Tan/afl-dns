@@ -65,7 +65,7 @@ let resource_record ?(name=default_name_as_hex) ?(rrtype=1) ?(rrclass=1) ?(ttl=3
   and hex_ttl = int_to_hex ~nb_bytes:4 ttl
   and hex_rdlength = int_to_hex rdlength
   in
-  name^hex_rrtype^hex_rrclass^hex_ttl^hex_rdlength;;
+  name^hex_rrtype^hex_rrclass^hex_ttl^hex_rdlength^rdata;;
 
 
 (** [concat_rr rr_list] returns the hex representation of the concatenated resource record list as a string. Returns an empty string if the list is empty.*)
@@ -169,7 +169,7 @@ let int_to_rr_typ_exn n = match Dns_enum.int_to_rr_typ n with
     [decode_query_exn packet] returns the decoded query using the µDNS parsing function and raises an error when it's not a query or a monadic error.*)
 let decode_query_exn cstr = match Dns_packet.decode cstr with
     |Ok ((_,`Query q,_,_), _) -> q
-    |Ok (update,_) -> failwith "Not a query packet"
+    |Ok _ -> failwith "Not a query packet"
     |Error e -> Fmt.failwith "%a" Dns_packet.pp_err e;;
 
 
