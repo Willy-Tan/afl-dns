@@ -33,6 +33,6 @@ The scripts are written for computers with eight cores or more. Scripts may not 
 - create the folders ```forAFL/persistent_output```, ```forAFL/persistent_output/odns_output```, ```forAFL/persistent_output/udns_output```, ```forAFL/crowbar_output``` if they don't exist
 - fuzzing ocaml-dns with AflPersistent : ```afl-fuzz -i forAFL/input/ -o forAFL/persistent_output/odns_output/ _build/install/default/bin/ocamldns_persistent_test```
 - fuzzing µDNS with AflPersistent : ```afl-fuzz -i forAFL/input/ -o forAFL/persistent_output/udns_output/ _build/install/default/bin/udns_persistent_test```
-- fuzzing with Crowbar (fuzzed implementation depends of the current crowbar_test.ml file) : ```afl-fuzz -i forAFL/input/ -o forAFL/crowbar_output/ _build/install/default/bin/crowbar_test @@```
+- fuzzing with Crowbar (fuzzed implementation depends of the current crowbar_test.ml file) : `afl-fuzz -i forAFL/input/ -o forAFL/crowbar_output/ _build/install/default/bin/crowbar_test @@`
 
 
