@@ -16,15 +16,15 @@ You need ```afl-fuzz```, ```afl-tmin```, ```afl-cmin``` installed to use all the
 
 ## How to use
 
-The Crowbar fuzzing implementation in this project is using the address ```127.0.0.1``` on port ```53```. Make sure the fuzzed server is listening to this port.__
+The Crowbar fuzzing implementation in this project is using the address ```127.0.0.1``` on port ```53```. Make sure the fuzzed server is listening to this port.
 
-To start fuzzing, you need to have afl-fuzz and tmux installed. Then, execute ```scripts/afl_persistent.sh``` to fuzz ocaml-dns and udns with afl-persistent, or execute ```scripts/afl_crowbar.sh``` to fuzz ocaml-dns and udns with Crowbar.  
+To start fuzzing, you need to have afl-fuzz and tmux installed. Then, execute ```scripts/afl_persistent.sh``` to fuzz ocaml-dns and udns with afl-persistent, or execute ```scripts/afl_crowbar.sh``` to fuzz ocaml-dns and udns with Crowbar.
 
-/!\ There is an option to resume past fuzzing attempts if it was stopped, but you should minimize the former outputs for better performances. Most often, there are many redundant outputs, or outputs that have bits not influencing the execution path. To minimize the outputs, execute ```scripts/minimize.sh```. Beware, because minimization takes a lot of time !__
+/!\ There is an option to resume past fuzzing attempts if it was stopped, but you should minimize the former outputs for better performances. Most often, there are many redundant outputs, or outputs that have bits not influencing the execution path. To minimize the outputs, execute ```scripts/minimize.sh```. Beware, because minimization takes a lot of time !
 
-Save the logs with ```scripts/log.sh```. It will print logs in the ```log``` folder.__
+Save the logs with ```scripts/log.sh```. It will print logs in the ```log``` folder.
 
-Launch unit tests with ```_build/install/default/bin/testcases```. It will output test results in ```_build/_tests```.__
+Launch unit tests with ```_build/install/default/bin/testcases```. It will output test results in ```_build/_tests```.
 
 
 ## Known issues 
@@ -33,6 +33,6 @@ The scripts are written for computers with eight cores or more. Scripts may not 
 - create the folders ```forAFL/persistent_output```, ```forAFL/persistent_output/odns_output```, ```forAFL/persistent_output/udns_output```, ```forAFL/crowbar_output``` if they don't exist
 - fuzzing ocaml-dns with AflPersistent : ```afl-fuzz -i forAFL/input/ -o forAFL/persistent_output/odns_output/ _build/install/default/bin/ocamldns_persistent_test```
 - fuzzing µDNS with AflPersistent : ```afl-fuzz -i forAFL/input/ -o forAFL/persistent_output/udns_output/ _build/install/default/bin/udns_persistent_test```
-- fuzzing with Crowbar (fuzzed implementation depends of the current crowbar_test.ml file) : ```afl-fuzz -i forAFL/input/ -o forAFL/crowbar_output/ _build/install/default/bin/crowbar_test @@```__
+- fuzzing with Crowbar (fuzzed implementation depends of the current crowbar_test.ml file) : ```afl-fuzz -i forAFL/input/ -o forAFL/crowbar_output/ _build/install/default/bin/crowbar_test @@```
 
 
