@@ -20,8 +20,9 @@ QUEUE_CMIN="queue_cmin"
 QUEUE_PTMIN="queue_ptmin"
 
 AFL_CMIN=afl-cmin
-AFL_PTMIN="scripts/afl-ptmin.sh"
+AFL_PTMIN="scripts/afl_ptmin.sh"
 
+CORES=$(grep -c ^processor /proc/cpuinfo)
 
 
 #------------------------------------------------------------------------------------------
@@ -56,7 +57,7 @@ for FUZZER in $ODNS_PATH/*; do
 	$AFL_CMIN -i $QUEUE_ALL -o $QUEUE_CMIN -- $ODNS_EXE
 	
 	#Then minimize with a parallelized afl-tmin
-	$AFL_PTMIN 8 $QUEUE_CMIN $QUEUE_PTMIN $ODNS_EXE
+	$AFL_PTMIN $CORES $QUEUE_CMIN $QUEUE_PTMIN $ODNS_EXE
 
 	#Copy back the files to the corresponding fuzzers after having removed them
 	rm $FUZZER/queue/*
@@ -84,7 +85,7 @@ for FUZZER in $UDNS_PATH/*; do
 	$AFL_CMIN -i $QUEUE_ALL -o $QUEUE_CMIN -- $UDNS_EXE
 	
 	#Then minimize with a parallelized afl-tmin
-	$AFL_PTMIN 8 $QUEUE_CMIN $QUEUE_PTMIN $UDNS_EXE
+	$AFL_PTMIN $CORES $QUEUE_CMIN $QUEUE_PTMIN $UDNS_EXE
 
 	#Copy back the files to the corresponding fuzzers after having removed them
 	rm $FUZZER/queue/*
@@ -108,10 +109,10 @@ for FUZZER in $CROW_PATH/*; do
 	cp -v $FUZZER/queue/* $QUEUE_ALL
 	
 	#Minimize with afl-cmin first
-	$AFL_CMIN -i $QUEUE_ALL -o $QUEUE_CMIN -- $UDNS_EXE
+	$AFL_CMIN -i $QUEUE_ALL -o $QUEUE_CMIN -- $CROW_EXE @@
 	
 	#Then minimize with a parallelized afl-tmin
-	$AFL_PTMIN 8 $QUEUE_CMIN $QUEUE_PTMIN $UDNS_EXE
+	$AFL_PTMIN $CORES $QUEUE_CMIN $QUEUE_PTMIN $CROW_EXE @@
 
 	#Copy back the files to the corresponding fuzzers after having removed them
 	rm $FUZZER/queue/*

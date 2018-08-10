@@ -17,6 +17,7 @@ set -u
 PERS_ODNS_TEST=./_build/install/default/bin/ocamldns_persistent_test
 PERS_UDNS_TEST=./_build/install/default/bin/udns_persistent_test
 CROW_TEST=./_build/install/default/bin/crowbar_test
+CROW_PRINTONLY=./_build/install/default/bin/crowbar_print
 
 #Persistent variables
 
@@ -204,8 +205,7 @@ for d in $PERS_UDNS_OUTPUT; do
 done
 
 
-: '
-WRITE OTHER EXECUTABLES TO SPECIFICALLY PRINT FOR CROWBAR !!
+
 #----------------------------- CROWBAR ---------------------------------
 
 #------------------------------ VALID ----------------------------------
@@ -220,10 +220,9 @@ for d in $CROW_OUTPUT; do
 	for f in $QUEUE/*; do
 		((COUNTER++))
 		echo -ne "Processing valid files... (${COUNTER}/${TOTAL})\r"
-		cat $f | $CROW_TEST &> $BUFFER
+	  $CROW_TEST $f &> $BUFFER
 		if [ -s $BUFFER ];then
 			echo -e "Reading file :" $f >> $CROW_VALID_LOG
-			echo -e "Content : $(cat $f)" >> $CROW_VALID_LOG
 			cat $BUFFER >> $CROW_VALID_LOG
 			echo -e "\n" >> $CROW_VALID_LOG
 		fi	
@@ -245,10 +244,9 @@ for d in $CROW_OUTPUT; do
 	for f in $HANGS/*; do
 		((COUNTER++))
 		echo -ne "Processing hanging files... (${COUNTER}/${TOTAL})\r"
-		cat $f | $CROW_TEST &> $BUFFER
+	  $CROW_PRINTONLY $f &> $BUFFER
 		if [ -s $BUFFER ];then
 			echo -e "Reading file :" $f >> $CROW_HANGS_LOG
-			echo -e "Content : $(cat $f)" >> $CROW_HANGS_LOG
 			cat $BUFFER >> $CROW_HANGS_LOG
 			echo -e "\n" >> $CROW_HANGS_LOG
 		fi	
@@ -269,10 +267,9 @@ for d in $CROW_OUTPUT; do
 	for f in $CRASHES/*; do
 		((COUNTER++))
 		echo -ne "Processing crash files... (${COUNTER}/${TOTAL})\r"
-		cat $f | $CROW_TEST &> $BUFFER
+	  $CROW_PRINTONLY $f &> $BUFFER
 		if [ -s $BUFFER ];then
 			echo -e "Reading file :" $f >> $CROW_CRASHES_LOG
-			echo -e "Content : $(cat $f)" >> $CROW_CRASHES_LOG
 			cat $BUFFER >> $CROW_CRASHES_LOG
 			echo -e "\n" >> $CROW_CRASHES_LOG
 		fi	
@@ -280,5 +277,5 @@ for d in $CROW_OUTPUT; do
 	echo ""
 done
 echo ""
-'
+
 rm -f $BUFFER

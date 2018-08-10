@@ -1,0 +1,6 @@
+(library
+	(name					packet_gen)
+	(public_name 	packet_gen)
+	(modules 			packet_gen)
+	(libraries 		crowbar)
+)

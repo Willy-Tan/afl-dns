@@ -1,3 +1,6 @@
+(*Lot of things to add to cover many RFC rules. This is mainly focused on µDNS as it will replace ocaml-dns in the future.*)
+
+
 (* ============ Packet crafting tools ============ *)
 
 (** [prepend_zero hex desired_length] prepends '0' to [hex] until its length reaches [desired_length]. If the length of [hex] is greater than [desired_length], nothing will be done. *)

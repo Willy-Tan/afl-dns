@@ -8,6 +8,7 @@ outputdir=$3
 pids=""
 total=`ls $inputdir | wc -l`
 EXE=$4
+FILE=$5
 ASK=""
 
 for k in `seq 1 $cores $total`
@@ -16,8 +17,11 @@ do
   do
     file=`ls -Sr $inputdir | sed $(expr $i + $k)"q;d"`
     echo $file
-    afl-tmin -i $inputdir/$file -o $outputdir/$file -- $EXE &
+		if [ "$5" != "" ]; then
+				afl-tmin -i $inputdir/$file -o $outputdir/$file -- $EXE $FILE &
+		else
+				afl-tmin -i $inputdir/$file -o $outputdir/$file -- $EXE &
+		fi
   done
-
   wait
 done

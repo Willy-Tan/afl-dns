@@ -36,11 +36,11 @@ if [ ! -d $UDNS_OUT ]; then
     mkdir $UDNS_OUT/udns01
 fi
 
-if [! -d $ODNS_OUT/odns01 ]; then
+if [ ! -d $ODNS_OUT/odns01 ]; then
     mkdir $ODNS_OUT/odns01
 fi
 
-if [! -d $UDNS_OUT/udns01 ]; then
+if [ ! -d $UDNS_OUT/udns01 ]; then
     mkdir $UDNS_OUT/udns01
 fi
 
@@ -88,8 +88,7 @@ else
     ODNS_INP_FLAG="-i-"
 fi	
 
-ODNS_MASTER_FLAGS="$ODNS_INP_FLAG -o $ODNS_OUT"
-ODNS_SLAVE_FLAGS="-i $INP -o $ODNS_OUT"
+ODNS_FLAGS="$ODNS_INP_FLAG -o $ODNS_OUT"
 
 #udns flags
 
@@ -99,8 +98,7 @@ else
     UDNS_INP_FLAG="-i-"
 fi 
 
-UDNS_MASTER_FLAGS="$UDNS_INP_FLAG -o $UDNS_OUT"
-UDNS_SLAVE_FLAGS="-i $INP -o $UDNS_OUT"
+UDNS_FLAGS="$UDNS_INP_FLAG -o $UDNS_OUT"
 
 #tmux display 
 
@@ -122,16 +120,16 @@ tmux split-window -h -t persistent_fuzzing:1.0
 tmux split-window -h -t persistent_fuzzing:1.1
 
 #send ocaml-dns fuzz commands
-tmux send-keys -t persistent_fuzzing:0.0 "afl-fuzz $ODNS_MASTER_FLAGS -M odns01 $ODNS_EXE" C-m
-tmux send-keys -t persistent_fuzzing:0.1 "afl-fuzz $ODNS_SLAVE_FLAGS -S odns02 $ODNS_EXE" C-m
-tmux send-keys -t persistent_fuzzing:0.2 "afl-fuzz $ODNS_SLAVE_FLAGS -S odns03 $ODNS_EXE" C-m
-tmux send-keys -t persistent_fuzzing:0.3 "afl-fuzz $ODNS_SLAVE_FLAGS -S odns04 $ODNS_EXE" C-m
+tmux send-keys -t persistent_fuzzing:0.0 "afl-fuzz $ODNS_FLAGS -M odns01 $ODNS_EXE" C-m
+tmux send-keys -t persistent_fuzzing:0.1 "afl-fuzz $ODNS_FLAGS -S odns02 $ODNS_EXE" C-m
+tmux send-keys -t persistent_fuzzing:0.2 "afl-fuzz $ODNS_FLAGS -S odns03 $ODNS_EXE" C-m
+tmux send-keys -t persistent_fuzzing:0.3 "afl-fuzz $ODNS_FLAGS -S odns04 $ODNS_EXE" C-m
 
 #send udns fuzz commands
-tmux send-keys -t persistent_fuzzing:1.0 "afl-fuzz $UDNS_MASTER_FLAGS -M udns01 $UDNS_EXE" C-m
-tmux send-keys -t persistent_fuzzing:1.1 "afl-fuzz $UDNS_SLAVE_FLAGS -S udns02 $UDNS_EXE" C-m
-tmux send-keys -t persistent_fuzzing:1.2 "afl-fuzz $UDNS_SLAVE_FLAGS -S udns03 $UDNS_EXE" C-m
-tmux send-keys -t persistent_fuzzing:1.3 "afl-fuzz $UDNS_SLAVE_FLAGS -S udns04 $UDNS_EXE" C-m
+tmux send-keys -t persistent_fuzzing:1.0 "afl-fuzz $UDNS_FLAGS -M udns01 $UDNS_EXE" C-m
+tmux send-keys -t persistent_fuzzing:1.1 "afl-fuzz $UDNS_FLAGS -S udns02 $UDNS_EXE" C-m
+tmux send-keys -t persistent_fuzzing:1.2 "afl-fuzz $UDNS_FLAGS -S udns03 $UDNS_EXE" C-m
+tmux send-keys -t persistent_fuzzing:1.3 "afl-fuzz $UDNS_FLAGS -S udns04 $UDNS_EXE" C-m
 
 #attach back the session
 tmux attach -t persistent_fuzzing

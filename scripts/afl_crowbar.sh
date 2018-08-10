@@ -1,6 +1,5 @@
 #!/bin/bash
 
-set -eu
 
 #Define directory variables
 
@@ -39,7 +38,9 @@ if [ -n "$(ls -A $OUT/fuzzer01)" ]; then
 	printf "Precedent ocaml-dns fuzzing will be resumed. \n\n"
     else
 	printf "Old data will be erased. \n\n"
-	rm -rf $OUT/fuzzer0*/*
+	rm -rfv $OUT/fuzzer0*/*
+	rm -rfv $OUT/fuzzer0*/.*
+	
     fi
 fi
 
