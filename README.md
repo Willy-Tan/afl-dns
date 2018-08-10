@@ -12,7 +12,7 @@ The fuzz tests are written specifically for ocaml-dns and µDNS : the code is no
 
 ## Installation
 
-You need ```afl-fuzz```, ```afl-tmin```, ```afl-cmin``` installed to use all the features of AflPersistent and Crowbar. Compile with the command ```dune build```.
+You need ```afl-fuzz```, ```afl-tmin```, ```afl-cmin``` installed to use all the features of AflPersistent and Crowbar. Clone the repository and compile with the command ```dune build```.
 
 ## How to use
 
